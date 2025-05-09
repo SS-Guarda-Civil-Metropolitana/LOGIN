@@ -103,18 +103,14 @@ body{
 
 }
 
-.caixa-lembrar label{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
+
 
 .caixa-lembrar a{
    text-decoration: none ;/*remove sublinhado abaixo do texto*/
     color:#fff
 }
 
-.caixa-lembrar label input{
+.caixa-lembrar input{
     accent-color: #372196;/*muda cor selecionada do check box*/
    
 
@@ -159,17 +155,7 @@ button::hover{
     margin-top: 2px;
 }
 
-@media screen and (max-width:400px){
-    .link-registro a{
-        display: inline-block;
-        position: absolute;
-        margin-left: -30px;
-       
-        color: #ac2020;
-        
 
-}
-}
 
 
 
