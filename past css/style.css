@@ -24,6 +24,9 @@ body{
 
  .estrelas{
     position: fixed;
+    /*----atenção----
+           quando eu fixo minha posição nesse efeito de tela de fundo, acabo bloqueado meu chekbox e link, ele fica inclicavel,
+           para desbloquear sera preciso ir ate a classe onde esta o chekbox e o link, e colocar a função z-index:1;*/
     top: 0;
     left: 0;
     width: 100%;
