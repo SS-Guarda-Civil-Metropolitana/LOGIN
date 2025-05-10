@@ -107,13 +107,21 @@ body{
 
 .caixa-lembrar a{
    text-decoration: none ;/*remove sublinhado abaixo do texto*/
-    color:#fff
+    color:#fff;
+    z-index: 2;
 }
 
 .caixa-lembrar input{
     accent-color: #372196;/*muda cor selecionada do check box*/
-   
+    display: flex;
+    position: relative;
+    z-index: 2;
+    width: 15px;
 
+}
+
+.caixa-lembrar p{
+   margin-left: -12%;
 }
 
 .caixa-lembrar a::hover{
@@ -144,8 +152,8 @@ button::hover{
 .link-registro a{
     display: inline-block;
     position: absolute;
-    margin-left: 18.5%;
-    top: 74.5%;
+    margin-left: 10%;
+    top: 74.2%;
     text-decoration: none;
     color: #fff;
     
