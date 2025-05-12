@@ -168,7 +168,7 @@ button::hover{
 }
 
 
-@media screen and (min-width:543px){
+@media screen and (min-width:450px){
     .link-registro a{
     display: inline-block;
     position: absolute;
@@ -176,6 +176,7 @@ button::hover{
     top: 68.5%;
     text-decoration: none;
     color: #fff;
+}
 }
 
 
