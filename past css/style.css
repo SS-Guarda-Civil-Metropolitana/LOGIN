@@ -168,12 +168,12 @@ button::hover{
 }
 
 
-@media screen and (max-width:450px){
+@media screen and (max-width:430px){
     .link-registro a{
     display: inline-block;
     position: absolute;
-    margin-left: 31%;
-    top: 66.7%;
+    margin-left: 33%;
+    top: 67.1%;
     text-decoration: none;
     color: #a51a1a;
   }
