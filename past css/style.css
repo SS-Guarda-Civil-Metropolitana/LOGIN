@@ -172,8 +172,8 @@ button::hover{
     .link-registro a{
     display: inline-block;
     position: absolute;
-    margin-left: 37%;
-    top: 71%;
+    margin-left: 35%;
+    top:68%;
     text-decoration: none;
     color: #a51a1a;
   }
