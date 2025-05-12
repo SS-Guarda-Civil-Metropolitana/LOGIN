@@ -12,7 +12,7 @@ em tecnologia como:
 
 [![Luiz henrique front](https://github-readme-stats.vercel.app/api?username=henriquefrontend)](https://github.com/anuraghazra/github-readme-stats)
 
-[![Luiz henrique front](https://github-readme-stats.vercel.app/api/top-langs/?username=henriquefrontend)](https://github.com/anuraghazra/github-readme-stats)
+[![Luiz henrique front](https://github-readme-stats.vercel.app/api/top-langs/?username=henriquefrontend)](https://github.com/anuraghazra/github-readme-stats)  
 
 
 
