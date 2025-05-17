@@ -170,9 +170,7 @@ button::hover{
     height: 20px;
     
 }
-function openPopug(){
-        window.open("http://127.0.0.1:5500/cadUsuario.html", "cadastro de gcm", "width=400,height=300,top=100,left=200");
-    }
+
 
 @media screen and (max-width:430px){
     .link-registro a{
