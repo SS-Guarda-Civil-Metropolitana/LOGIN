@@ -15,7 +15,10 @@ body{
     align-items:  center;
     min-height: 100vh;/*essa função faz com quer body com 100vh ocupe todo tela*/
     overflow: hidden;
-    background: linear-gradient(to left, #3A438A, #443C9E, #1D1478, #5A5AE6, #28316B);/*essa função tem poder de pegar varias cores e fazer a troca gradativamente */
+    /*background: linear-gradient(to left, #3A438A, #443C9E, #1D1478, #5A5AE6, #28316B);/*essa função tem poder de pegar varias cores e fazer a troca gradativamente */
+    background-image: url(../assets/logoprincipal2.jpg);
+    background-size: 100% 100%;
+    
     /*o atributo 'to bottom' faz com quer a cor comence a fazer a mudaçã de baixo para cima */
     position: relative;
     color: wheat;
@@ -150,6 +153,7 @@ button{
     color: #1D1478;
     font-size: 15px;
     font-weight: 600;/*coloca um tom mais forte na cor*/
+    
 }
 
 button::hover{
@@ -160,16 +164,24 @@ button::hover{
 
 .link-registro p{
     margin-top: 20.3px;
-    margin-left: 63.2%;
+    margin-left: 62.2%;
     color: #fff;
 }
 
 .link-registro a{
     display: inline-block;
     position: absolute;
-    margin-left: 41.8%;
+    margin-left: 55.8%;
     top: 61.7%;
     text-decoration: none;
-    color: #141615;
+    color: #fff;
+    
+}
+
+@media screen and (max-width:615px){
+    .link-registro a{
+
+  }
+
     
 }
