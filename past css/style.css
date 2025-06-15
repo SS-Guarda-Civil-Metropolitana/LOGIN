@@ -340,6 +340,67 @@ body {
 
 
     }
+} 
+
+
+ @media screen and (min-width:2220px) {
+    .formulario { 
+         width: 300px;
+         height: 40%;
+    
+
 }
 
+
+        .link-registro a {
+            display: inline-block;
+            position: absolute;
+            left: 9%;
+            top: 61.5%;
+            text-decoration: none;
+
+        
+        }
+  
+        .formulario .chekbox {
+            bottom: 28.7%;
+            left: 12%;
+            
+            
+            
+        }
+        .link-registro a {
+            top: 20;
+          
+
+        
+        }
+
+.bxs-user {
+    left: 13%;
+    top: 42% ;
+    
+}
+ 
+.bxs-lock-alt {
+    left: 13%;
+    top: 58% ;
+   
+}
+.link-registro a {
+        left: 20%;
+        top: 80.9%;
+      
+
+
+    }
+
+    .formulario a {
+    margin-top: -1%;
+}
+
+
+    }
+} 
+}
 
