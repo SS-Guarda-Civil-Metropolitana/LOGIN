@@ -200,6 +200,16 @@ body {
     bottom: 36.5%;
  
 }
+
+
+@media screen and (min-width:360px){/*taanho da tela samsung s8*/
+    .link-registro a{
+        top: 49.4%;
+  }
+.formulario .chekbox {  
+    bottom: 47.2%;
+ 
+}
     
 }
 
