@@ -211,12 +211,12 @@ body {
 
     /*taanho da tela samsung s8*/
     .link-registro a {
-        margin-top: 6.3%;
+        margin-top: -3%;
 
     }
 
     .formulario .chekbox {
-        bottom: 40.2%;
+        bottom: 47.2%;
         display: block;
         position: absolute;
 
