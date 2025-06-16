@@ -51,7 +51,7 @@ body {
 */
 .formulario {
     position: absolute;
-    display:inline-block;
+    display: inline-block;
     width: 400px;
     height: 80%;
     margin-top: 1%;
@@ -190,28 +190,40 @@ body {
 
 }
 
- 
 
-@media screen and (max-width:615px){
-    .link-registro a{
-        top: 59.4%;
-  }
-.formulario .chekbox {  
-    bottom: 36.5%;
- 
+
+@media screen and (max-width:300px) {
+    .link-registro a {
+        top: 20.4%;
+        display: block;
+        position: absolute;
+    }
+
+    .formulario .chekbox {
+        bottom: 20.5%;
+        display: block;
+        position: absolute;
+
+    }
+}
+
+@media screen and (max-width:400px) {
+
+    /*taanho da tela samsung s8*/
+    .link-registro a {
+        margin-top: 6.3%;
+
+    }
+
+    .formulario .chekbox {
+        bottom: 40.2%;
+        display: block;
+        position: absolute;
+
+    }
 }
 
 
-@media screen and (min-width:360px){/*taanho da tela samsung s8*/
-    .link-registro a{
-        top: 49.4%;
-  }
-.formulario .chekbox {  
-    bottom: 47.2%;
- 
-}
-}  
-}
 
 /*
 @media screen and (max-width:507px) {
