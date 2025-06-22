@@ -70,7 +70,7 @@ body {
 .formulario button {
     display: inline-block;
     position: absolute;
-    margin-top: 15%;
+    margin-top: 45%;
     width: 82%;
     height: 30px;
     border-radius: 7px;
@@ -100,13 +100,13 @@ body {
 .formulario a {
     position: absolute;
     margin-left: 38%;
-    margin-top: 9%;
+    margin-top: 40%;
 }
 
 .formulario p {
     position: absolute;
     margin-left: 5%;
-    margin-top: 9%;
+    margin-top: 40%;
 
 }
 
@@ -114,15 +114,24 @@ body {
     position: absolute;
     display: inline-block;
     width: 13px;
-    bottom: 38.4%;
+    bottom: 37.4%;
     left: 9%;
+}
+
+.input{
+    display: block;
+    position: absolute;
+    margin-top: 5%;
+    width: 82%;
+
+    
 }
 
 
 
 .formulario input {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom:10px;
     width: 100%;
     height: 50px;
     border: none;
@@ -147,23 +156,23 @@ body {
 .bxs-user {
     display: inline-block;
     position: absolute;
-    margin-top: -11%;
-    left: 9.5%;
+    margin-top: -13%;
+    margin-left: 1%;
     color: black;
 }
 
 .bxs-lock-alt {
     display: inline-block;
     position: absolute;
-    margin-top: -11%;
-    left: 9.5%;
+    margin-top: -13%;
+    margin-left: 1%;
     color: black;
 }
 
 
 
 .link-registro p {
-    margin-top: 24%;
+    margin-top: 54%;
     color: #fff;
     left: 4%;
 }
@@ -172,7 +181,7 @@ body {
     display: inline-block;
     position: absolute;
     margin-left: 34%;
-    top: 57.6%;
+    margin-top: 54%;
     text-decoration: none;
     color: #fff;
     width: 90px;
@@ -190,11 +199,49 @@ body {
 
 }
 
+label{
+    position: absolute;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    margin-top: -6%;
+    margin-left: 25%;
+}
+
+select{
+    position: absolute;
+    background: #ffffff09;
+    color: black;
+    font-weight: bold;
+    width: 82%;
+    margin-top: -6%;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0);
+}
+option{
+     background: #ffffff00;
+}
 
 
+
+@media screen and (max-width:675px) {
+    .link-registro a {
+        top: 23.3%;
+        display: block;
+        position: absolute;
+    }
+
+    .formulario .chekbox {
+        bottom: 34%;
+        display: block;
+        position: absolute;
+
+    }
+
+}
 @media screen and (max-width:300px) {
     .link-registro a {
-        top: 20.4%;
+        top: 29.4%;
         display: block;
         position: absolute;
     }
