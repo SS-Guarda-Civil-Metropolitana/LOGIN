@@ -9,41 +9,25 @@
     /*essa função busca la no goggle fontes*/
 }
 
-body{
-    display: flex;/*essa função posibilita flexbilizar um layout resposivo*/
-    justify-content: center ;
-    align-items:  center;
-    min-height: 100vh;/*essa função faz com quer body com 100vh ocupe todo tela*/
+body {
+    display: flex;
+    /*essa função posibilita flexbilizar um layout resposivo*/
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /*essa função faz com quer body com 100vh ocupe todo tela*/
     overflow: hidden;
-    background: linear-gradient(to left, #3A438A, #443C9E, #1D1478, #5A5AE6, #28316B);/*essa função tem poder de pegar varias cores e fazer a troca gradativamente */
+    /*background: linear-gradient(to left, #3A438A, #443C9E, #1D1478, #5A5AE6, #28316B);/*essa função tem poder de pegar varias cores e fazer a troca gradativamente */
+    background-image: url(../assets/logoprincipal2.jpg);
+    background-size: 100% 100%;
+
     /*o atributo 'to bottom' faz com quer a cor comence a fazer a mudaçã de baixo para cima */
     position: relative;
     color: wheat;
 }
 
 
- .estrelas{
-    position: fixed;
-    /*----atenção----
-           quando eu fixo minha posição nesse efeito de tela de fundo, acabo bloqueado meu chekbox e link, ele fica inclicavel,
-           para desbloquear sera preciso ir ate a classe onde esta o chekbox e o link, e colocar a função z-index:1;*/
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image:  
-    radial-gradient(1px 1px at 25% 15%, #fff, transparent),  /*nessa função irei colocar minhas estralas*/
-    radial-gradient(1px 1px at 55% 45%, #fff, transparent),
-    radial-gradient(2px 2px at 15% 55%, #fff, transparent),
-    radial-gradient(1.5px 1.5px at 88% 60%, #fff, transparent),
-    radial-gradient(1px 1px at 89% 75%, #fff, transparent),
-    radial-gradient(1.5px 1.5px at 39% 10%, #fff, transparent),
-    radial-gradient(2px 2px at 5% 35%, #fff, transparent),
-    radial-gradient(1px 1px at 65% 85%, #fff, transparent),
-    radial-gradient(1.5px 1.5px at 40% 5%, #fff, transparent);
 
-
- }
 
  .formulario{
     width: 700px;
@@ -65,6 +49,7 @@ body{
     margin-left: -70%;
     margin-top: -5%;
     text-align: center;
+    color: black;
  }
 
  .caixa-fornulario{
@@ -88,7 +73,8 @@ body{
  }
 
  .formulario input::placeholder{/* essa função consigo trocar a cor do texto que esta no imput*/
-    color: rgba(255, 255,255, 0.6);
+    color: black;
+    font-weight: bold;
 
 }
 
@@ -144,40 +130,48 @@ button{
     height: 30px;
     border-radius: 7px;
     border: none;
-    background-color: rgba(247, 238, 238, 0.9);
+    background-color: rgba(247, 238, 238, 0.205);
     outline: none;/*remover linha ao redor*/
     cursor: pointer;
-    color: #1D1478;
+    color: black;
+    font-weight: bold;
     font-size: 15px;
     font-weight: 600;/*coloca um tom mais forte na cor*/
     
 }
 
-button::hover{
-    background-color: aqua;
-
+button:hover{
+    background-color: #000080;
 }
 
 
 .link-registro p{
     margin-top: 20.3px;
-    margin-left: 62.2%;
+    margin-left: 50.2%;
     color: #fff;
 }
 
 .link-registro a{
     display: inline-block;
     position: absolute;
-    margin-left: 55.8%;
-    top: 61.7%;
+    margin-left: 36.8%;
+    top: 62%;
     text-decoration: none;
-    color: #141615;
+    color: white;
+    font-weight: bold;
     
 }
 
-@media screen and (max-width:615px){
+.link-registro a:hover{
+ color: #000080;
+}
+
+
+
+@media screen and (max-width:675px){
     .link-registro a{
-        margin-left: 45%;
+        margin-left: 72%;
+        margin-top: 1%;
   }
 
     

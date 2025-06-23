@@ -70,7 +70,7 @@ body {
 .formulario button {
     display: inline-block;
     position: absolute;
-    margin-top: 46%;
+    margin-top: 45%;
     width: 82%;
     height: 30px;
     border-radius: 7px;
@@ -84,10 +84,6 @@ body {
     font-size: 15px;
     font-weight: 600;
     /*coloca um tom mais forte na cor*/
-}
-
-.formulario button:hover {
-    background-color: #000080; 
 }
 
 .formulario h1 {
@@ -195,12 +191,11 @@ body {
     background: transparent;
     border-radius: 7px;
     text-shadow: 10px;
-    font-weight: bold;
 
 }
 
 .link-registro a:hover {
-    color: #000080; 
+    color: rgb(9, 94, 37);
 
 }
 
