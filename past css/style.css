@@ -274,19 +274,18 @@ option{
     }
 }
     
-@media screen and (max-width:320px) {/*s9 tela */
+@media screen and (max-width:420px) {/*s9 tela */
 
     /*taanho da tela samsung s9*/
     .link-registro a {
-        margin-top: 6.2%;
+        margin-top: 62%;
 
     } 
 
 
     .formulario .chekbox {
-        bottom: 40.2%;
-        display: block;
-        position: absolute;
+        margin-top: 17%;
+        
 
     }
     
