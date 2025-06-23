@@ -259,18 +259,17 @@ option{
     }
 }
 
-@media screen and (max-width:360px) {/*s8 tela */
+@media screen and (max-width:400px) {/*s8 tela */
 
     /*taanho da tela samsung s8*/
     .link-registro a {
-        margin-top: -3%;
+        margin-top: 56%;
 
     }   
 
     .formulario .chekbox {
-        bottom: 47.2%;
-        display: block;
-        position: absolute;
+        margin-top: 4%;
+        
 
     }
 }
