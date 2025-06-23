@@ -244,15 +244,15 @@ option{
     }
 
 }
-@media screen and (max-width:300px) {
+@media screen and (max-width:500px) {
     .link-registro a {
-        top: 29.4%;
+        top: 15.4%;
         display: block;
         position: absolute;
     }
 
     .formulario .chekbox {
-        bottom: 20.5%;
+        top: 35.7%;
         display: block;
         position: absolute;
 
