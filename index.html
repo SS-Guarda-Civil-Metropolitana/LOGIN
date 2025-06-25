@@ -20,34 +20,34 @@
         
              
             <select id="tipoAcesso" name="tipoAcesso" class="form-select-custom">
-                <option value="Secretario" selected>NiveL-Hierárquico     Secretario</option>
-                <option value="conselho_tutelar">NiveL-Hierárquico  Comando</option>
-                <option value="pref_juazeiro">NiveL-Hierárquico  Sub-comando</option>
-                <option value="prev_social_juazeiro">NiveL-Hierárquico  Inspetor-Gestor</option>
-                  <option value="prev_social_juazeiro">NiveL-Hierárquico  Inspetor</option>
-                    <option value="prev_social_juazeiro">NiveL-Hierárquico  Sub-Inspetor</option>
-                      <option value="prev_social_juazeiro">NiveL-Hierárquico  Guarda-Nivel3</option>
+                <option value="Secretario" selected>NiveL Operacional</option>
+                <option value="conselho_tutelar">NiveL Tatico</option>
+                <option value="pref_juazeiro">NiveL Estrategico</option>
             </select>
+
                 <div class="input">
-                <input type="text" placeholder="Nome de Usuario">
+                <input type="text" onclick="removePlaceholder(this)"  placeholder="Nome de Guerra" >
                 <i class='bx bxs-user'></i><!--a função bx bxs, adciona visualizar o incone na tela do usuario, ja atributo USER é o icone a ser visto, nesse caso UM USUARIO-->
 
-                <input type="password" placeholder="Digite sua senha">
+                <input type="password" placeholder="Digite sua Matricula">
                 <i class='bx bxs-lock-alt'></i><!--a função bx bxs, adciona visualizar o incone na tela do usuario, ja atributo LOCK-ALT é o icone a ser visto, nesse caso um cadeado-->
                 </div>
 
                 <input class="chekbox" type="checkbox">
-                <p>Lembreme</p>
+                <p>Lembre-me</p>
                 <a>Esqueceu sua senha?</a>
 
 
                 <button type="submit">Entrar</button>
-
+                <img src="./assets/logo.jpeg" >
+                <img class="pre" src="./assets/logo-prefeitura2.jpg" >
                 <div class="link-registro">
                     <p>Nao tem conta?</p><a href="cadUsuario.html">Cadastra-se</a>
                 </div>
             </div>
     </div>
+
+    
 </body>
 
 </html>

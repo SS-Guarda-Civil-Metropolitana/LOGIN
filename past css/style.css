@@ -18,9 +18,9 @@ body {
     /*essa função faz com quer body com 100vh ocupe todo tela*/
     overflow: hidden;
     /*background: linear-gradient(to left, #3A438A, #443C9E, #1D1478, #5A5AE6, #28316B);/*essa função tem poder de pegar varias cores e fazer a troca gradativamente */
-    background-image: url(../assets/logoprincipal2.jpg);
+    background-image: url(../assets/bandeiaJuazeiro.jpg);
     background-size: 100% 100%;
-
+    
     /*o atributo 'to bottom' faz com quer a cor comence a fazer a mudaçã de baixo para cima */
     position: relative;
     color: wheat;
@@ -52,30 +52,32 @@ body {
 .formulario {
     position: absolute;
     display: inline-block;
-    width: 400px;
+    width: 800px;
     height: 80%;
     margin-top: 1%;
-    background-color: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgb(255, 255, 255, 0.2);
+    margin-right: 25%;
+    background-color: rgba(255, 255, 255, 0.651);
+    border: 1px solid rgba(255, 255, 255, 0.596);
     ;
     backdrop-filter: blue 40px;
     backdrop-filter: 10px;
     /*diar a cor pouco mais clarinha de efeito*/
     box-shadow: 0 8px 32px rgb(0, 0, 0, 0.2);
-    border-radius: 26px;
+    border-radius: 15px 0 0 15px;
     padding: 35px;
+    opacity: 90%;
 
 }
 
 .formulario button {
     display: inline-block;
     position: absolute;
-    margin-top: 46%;
-    width: 82%;
+    margin-top: 23%;
+    width: 41%;
     height: 30px;
     border-radius: 7px;
     border: none;
-    background-color: rgba(247, 238, 238, 0.39);
+    background-color:  rgba(73, 128, 139, 0.849);
     outline: none;
     /*remover linha ao redor*/
     cursor: pointer;
@@ -87,14 +89,14 @@ body {
 }
 
 .formulario button:hover {
-    background-color: #000080; 
+    background-color: rgb(38, 194, 38)
 }
 
 .formulario h1 {
     font-size: 25px;
     margin-bottom: 30px;
     font-weight: 600;
-    margin-left: 2%;
+    margin-left: -55%;
     margin-top: 5%;
     color: black;
     text-align: center;
@@ -103,14 +105,19 @@ body {
 
 .formulario a {
     position: absolute;
-    margin-left: 38%;
-    margin-top: 40%;
+    margin-left: 18%;
+    margin-top: 20%;
+    color: black;
+    font-weight: bold;
+
 }
 
 .formulario p {
     position: absolute;
-    margin-left: 5%;
-    margin-top: 40%;
+    margin-left: 3%;
+    margin-top: 20%;
+    color: black;
+    font-weight: bold;
 
 }
 
@@ -118,8 +125,10 @@ body {
     position: absolute;
     display: inline-block;
     width: 13px;
-    bottom: 37.4%;
-    left: 9%;
+    bottom: 33.4%;
+    left: 5%;
+    
+    
 }
 
 .input{
@@ -136,13 +145,13 @@ body {
 .formulario input {
     display: block;
     margin-bottom:10px;
-    width: 100%;
+    width: 50%;
     height: 50px;
     border: none;
     border-radius: 10px;
     outline: none;
     color: black;
-    background-color: rgba(235, 240, 241, 0.37);
+    background-color: rgba(73, 128, 139, 0.849);
     font-size: 16px;
     padding: 0 20px;
 }
@@ -157,10 +166,12 @@ body {
 
 }
 
+
+
 .bxs-user {
     display: inline-block;
     position: absolute;
-    margin-top: -13%;
+    margin-top: -6.7%;
     margin-left: 1%;
     color: black;
 }
@@ -168,7 +179,7 @@ body {
 .bxs-lock-alt {
     display: inline-block;
     position: absolute;
-    margin-top: -13%;
+    margin-top: -6.7%;
     margin-left: 1%;
     color: black;
 }
@@ -176,18 +187,19 @@ body {
 
 
 .link-registro p {
-    margin-top: 54%;
-    color: #fff;
-    left: 4%;
+    margin-top: 27%;
+    color: black;
+    left: 1.5%;
+    font-weight: bold;
 }
 
 .link-registro a {
     display: inline-block;
     position: absolute;
-    margin-left: 34%;
-    margin-top: 54%;
+    margin-left: 18%;
+    margin-top: 27%;
     text-decoration: none;
-    color: #fff;
+    color: black;
     width: 90px;
     height: 20px;
     white-space: nowrap;
@@ -215,17 +227,44 @@ label{
 
 select{
     position: absolute;
-    background: #ffffff09;
+    background-color:  rgba(73, 128, 139, 0.849);;
     color: black;
     font-weight: bold;
-    width: 82%;
-    margin-top: -6%;
+    width: 41%;
+    margin-top: -1.4%;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0);
 }
+
+
 option{
-     background: #ffffff00;
+    color: black;
+    font-weight: bold;
 }
+
+img{
+    display: inline-block;
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    margin-left: 95.5%;
+    margin-top: -16.7%;
+    opacity: 20%;
+    border-radius: 0 20px 0px 0;
+}
+
+
+.pre{
+    display: inline-block;
+    position: absolute;
+    width: 30%;
+    height: 51%;
+    margin-left: 95.5%;
+    margin-top: 14.7%;
+    opacity: 40%;
+    border-radius: 0 0px 20px 0;
+}
+
 
 
 
