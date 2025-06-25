@@ -20,7 +20,7 @@ body {
     /*background: linear-gradient(to left, #3A438A, #443C9E, #1D1478, #5A5AE6, #28316B);/*essa função tem poder de pegar varias cores e fazer a troca gradativamente */
     background-image: url(../assets/bandeiaJuazeiro.jpg);
     background-size: 100% 100%;
-    
+    margin-left: 19%;
     /*o atributo 'to bottom' faz com quer a cor comence a fazer a mudaçã de baixo para cima */
     position: relative;
     color: wheat;
@@ -52,29 +52,29 @@ body {
 .formulario {
     position: absolute;
     display: inline-block;
-    width: 800px;
+    width: 700px;
     height: 80%;
     margin-top: 1%;
     margin-right: 25%;
-    background-color: rgba(255, 255, 255, 0.651);
-    border: 1px solid rgba(255, 255, 255, 0.596);
-    ;
+    background-color: rgb(4, 67, 201);
+    border: 2px solid black;
     backdrop-filter: blue 40px;
     backdrop-filter: 10px;
     /*diar a cor pouco mais clarinha de efeito*/
-    box-shadow: 0 8px 32px rgb(0, 0, 0, 0.2);
-    border-radius: 15px 0 0 15px;
+    box-shadow: 2px 2px 10px 1px  black;
+    border-radius: 0 0 0 0;
     padding: 35px;
-    opacity: 90%;
+  
 
 }
 
 .formulario button {
     display: inline-block;
     position: absolute;
-    margin-top: 23%;
-    width: 41%;
+    margin-top: 45%;
+    width: 45%;
     height: 30px;
+    left: 30%;
     border-radius: 7px;
     border: none;
     background-color:  rgba(73, 128, 139, 0.849);
@@ -89,24 +89,45 @@ body {
 }
 
 .formulario button:hover {
-    background-color: rgb(38, 194, 38)
+    background-color: rgb(57, 192, 57);
 }
 
 .formulario h1 {
     font-size: 25px;
-    margin-bottom: 30px;
+   
     font-weight: 600;
-    margin-left: -55%;
-    margin-top: 5%;
+    margin-left: 32%;
+    margin-top: 10%;
     color: black;
     text-align: center;
     font-weight: bold;
 }
 
+h1{
+    display: block;
+    position: absolute;
+    margin-top: 100%;
+}
+
+
+select{
+    position: absolute;
+    background-color:  rgba(73, 128, 139, 0.849);;
+    color: black;
+    margin-left: 25%;
+    font-weight: bold;
+    width: 44%;
+    margin-top: 18%;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0);
+}
+
+
+
 .formulario a {
     position: absolute;
-    margin-left: 18%;
-    margin-top: 20%;
+    margin-left: 43%;
+    margin-top: 40%;
     color: black;
     font-weight: bold;
 
@@ -114,8 +135,8 @@ body {
 
 .formulario p {
     position: absolute;
-    margin-left: 3%;
-    margin-top: 20%;
+    margin-left: 27.2%;
+    margin-top: 40%;
     color: black;
     font-weight: bold;
 
@@ -125,28 +146,29 @@ body {
     position: absolute;
     display: inline-block;
     width: 13px;
-    bottom: 33.4%;
-    left: 5%;
+    margin-top: 39%;
+    left: 30%;
+    border: 30px yellow;
     
     
 }
 
 .input{
-    display: block;
+    display: inline-block;
     position: absolute;
-    margin-top: 5%;
-    width: 82%;
+    margin-top: 23%;
+    width: 89%;
+    margin-left: 25%;
 
     
 }
 
 
-
 .formulario input {
     display: block;
-    margin-bottom:10px;
+    margin-bottom: 20px;
     width: 50%;
-    height: 50px;
+    height: 35px;
     border: none;
     border-radius: 10px;
     outline: none;
@@ -171,7 +193,7 @@ body {
 .bxs-user {
     display: inline-block;
     position: absolute;
-    margin-top: -6.7%;
+    margin-top: -8%;
     margin-left: 1%;
     color: black;
 }
@@ -179,7 +201,7 @@ body {
 .bxs-lock-alt {
     display: inline-block;
     position: absolute;
-    margin-top: -6.7%;
+    margin-top: -8%;
     margin-left: 1%;
     color: black;
 }
@@ -187,17 +209,17 @@ body {
 
 
 .link-registro p {
-    margin-top: 27%;
+    margin-top: 50%;
     color: black;
-    left: 1.5%;
+    left: 13%;
     font-weight: bold;
 }
 
 .link-registro a {
     display: inline-block;
     position: absolute;
-    margin-left: 18%;
-    margin-top: 27%;
+    margin-left: 55%;
+    margin-top: 50%;
     text-decoration: none;
     color: black;
     width: 90px;
@@ -212,7 +234,7 @@ body {
 }
 
 .link-registro a:hover {
-    color: #000080; 
+    color: rgb(57, 192, 57);
 
 }
 
@@ -225,17 +247,6 @@ label{
     margin-left: 25%;
 }
 
-select{
-    position: absolute;
-    background-color:  rgba(73, 128, 139, 0.849);;
-    color: black;
-    font-weight: bold;
-    width: 41%;
-    margin-top: -1.4%;
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0);
-}
-
 
 option{
     color: black;
@@ -246,11 +257,13 @@ img{
     display: inline-block;
     position: absolute;
     width: 30%;
-    height: 50%;
-    margin-left: 95.5%;
-    margin-top: -16.7%;
-    opacity: 20%;
-    border-radius: 0 20px 0px 0;
+    height: 100.5%;
+    margin-left: -35%;
+    margin-top: -5.3%;
+    opacity: 80%;
+    border-radius: 20px 0 0 20px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 10px 1px  black;
 }
 
 
@@ -258,11 +271,13 @@ img{
     display: inline-block;
     position: absolute;
     width: 30%;
-    height: 51%;
-    margin-left: 95.5%;
-    margin-top: 14.7%;
-    opacity: 40%;
-    border-radius: 0 0px 20px 0;
+    height: 100.5%;
+    margin-left: 95.3%;
+    margin-top: -5.3%;
+    opacity: 80%;
+    border-radius: 0 20px 20px 0;
+    border: 2px solid black;
+     box-shadow: 2px 2px 10px 1px  black;
 }
 
 
