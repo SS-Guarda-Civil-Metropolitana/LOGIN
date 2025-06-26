@@ -26,6 +26,13 @@ body {
     color: wheat;
 }
 
+img{
+    position: absolute;
+    display: inline-block;
+    width: 10%;
+    opacity: 40%;
+}
+
 
 
 
@@ -39,14 +46,18 @@ body {
     box-shadow: 0 15px 32px rgba(0, 0, 0, 0.842);
     border-radius: 16px;
     padding: 35px;
+  
+
 
  }
 
- .formulario h1{
+  .formulario h1{
+    position: absolute;
+    display: inline-block;
     font-size: 25px;
     margin-bottom: 30px;
     font-weight: 600;
-    margin-left: -70%;
+    margin-left: 80%;
     margin-top: -5%;
     text-align: center;
     color: black;
