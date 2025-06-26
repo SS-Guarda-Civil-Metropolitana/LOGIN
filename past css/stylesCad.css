@@ -18,7 +18,7 @@ body {
     /*essa função faz com quer body com 100vh ocupe todo tela*/
     overflow: hidden;
     /*background: linear-gradient(to left, #3A438A, #443C9E, #1D1478, #5A5AE6, #28316B);/*essa função tem poder de pegar varias cores e fazer a troca gradativamente */
-    background-image: url(../assets/logoprincipal2.jpg);
+    background-image: url(../assets/bandeiaJuazeiro.jpg);
     background-size: 100% 100%;
 
     /*o atributo 'to bottom' faz com quer a cor comence a fazer a mudaçã de baixo para cima */
@@ -30,13 +30,13 @@ body {
 
 
  .formulario{
-    width: 700px;
+    width: 600px;
     height: 600px;
-    background-color: rgba(255, 255,255, 0.15);
-    border: 1px solid rgb(255, 255, 255, 0.2);;
+    background-color: rgb(51, 51, 146);
+   border: 1px solid rgb(255, 255, 255, 0.2);;
     backdrop-filter: blue 40px;
     backdrop-filter: 10px;/*diar a cor pouco mais clarinha de efeito*/
-    box-shadow: 0 8px 32px rgb(0,0,0,0.2);
+    box-shadow: 0 15px 32px rgba(0, 0, 0, 0.842);
     border-radius: 16px;
     padding: 35px;
 
@@ -55,19 +55,20 @@ body {
  .caixa-fornulario{
     position: relative ;
     margin-bottom: 30px;
-
+                                                                      
  }
 
  .formulario input{
-    width: 100%;
+    width: 60%;
     display: block;
     margin-bottom: 15px;
+    margin-left: 20%;
     height: 50px;
     border: none;
     border-radius: 10px;
     outline: none;
     color: #fff;
-    background-color: rgba(255, 255,255, 0.1);
+    background-color: rgba(13, 172, 97, 0.1);
     font-size: 16px;
     padding: 0 20px;
  }
@@ -125,9 +126,10 @@ body {
 button{
     display: inline-block;
     position: relative;
-    top: 10px;
-    width: 100%;
+    top: 5px;
+    width: 50%;
     height: 30px;
+    left: 30%;
     border-radius: 7px;
     border: none;
     background-color: rgba(247, 238, 238, 0.205);
@@ -141,21 +143,21 @@ button{
 }
 
 button:hover{
-    background-color: #000080;
+    background-color: yellow
 }
 
 
 .link-registro p{
-    margin-top: 20.3px;
-    margin-left: 50.2%;
+    margin-top: 13px;
+    margin-left: 30%;
     color: #fff;
 }
 
 .link-registro a{
     display: inline-block;
     position: absolute;
-    margin-left: 36.8%;
-    top: 62%;
+    margin-left: 22%;
+    top: 82%;
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -163,7 +165,7 @@ button:hover{
 }
 
 .link-registro a:hover{
- color: #000080;
+ color: yellow;
 }
 
 
