@@ -1,0 +1,43 @@
+.foto-container {
+  width: 150px; /* Largura aproximada de uma foto 3x4, ajuste conforme necessário */
+  height: 200px; /* Altura aproximada de uma foto 3x4, ajuste conforme necessário */
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Garante que a imagem não "vaze" do container */
+  position: relative;
+  cursor: pointer;
+}
+
+.foto-label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 200px; /* Alinha o texto verticalmente, se necessário */
+  color: #888;
+}
+
+.placeholder {
+  font-size: 14px;
+}
+
+#input-foto {
+  /* Esconde o input de arquivo original, mas o mantém funcional */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.foto-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
+  display: none; /* Esconde a imagem inicialmente */
+}

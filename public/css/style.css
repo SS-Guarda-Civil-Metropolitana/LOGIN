@@ -1,0 +1,696 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*   essa função busca la no goggle fontes  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    /*essa função busca la no goggle fontes*/
+}
+
+body {
+    display: flex;
+    /*essa função posibilita flexbilizar um layout resposivo*/
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /*essa função faz com quer body com 100vh ocupe todo tela*/
+    overflow: hidden;
+    /*background: linear-gradient(to left, #3A438A, #443C9E, #1D1478, #5A5AE6, #28316B);/*essa função tem poder de pegar varias cores e fazer a troca gradativamente */
+    background-image: url(../assets/bandeiaJuazeiro.jpg);
+    background-size: 100% 100%;
+    margin-left: 19%;
+    /*o atributo 'to bottom' faz com quer a cor comence a fazer a mudaçã de baixo para cima */
+    position: relative;
+    color: wheat;
+}
+
+/* AQUI ESSA EFEITO DE ESTRALA NO FUNDO DA PAGINA FOI DESABILITADO
+ .estrelas{
+    position: fixed;
+    /*----atenção----
+           quando eu fixo minha posição nesse efeito de tela de fundo, acabo bloqueado meu chekbox e link, ele fica inclicavel,
+           para desbloquear sera preciso ir ate a classe onde esta o chekbox e o link, e colocar a função z-index:1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:  
+    radial-gradient(1px 1px at 25% 15%, #fff, transparent),  nessa função irei colocar minhas estralas
+    radial-gradient(1px 1px at 55% 45%, #fff, transparent),
+    radial-gradient(2px 2px at 15% 55%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 88% 60%, #fff, transparent),
+    radial-gradient(1px 1px at 89% 75%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 39% 10%, #fff, transparent),
+    radial-gradient(2px 2px at 5% 35%, #fff, transparent),
+    radial-gradient(1px 1px at 65% 85%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 40% 5%, #fff, transparent);
+
+ }
+*/
+.formulario {
+    position: absolute;
+    display: inline-block;
+    width: 700px;
+    height: 80%;
+    margin-top: 1%;
+    margin-right: 25%;
+    background-color: white;
+    border: 2px solid black;
+    backdrop-filter: blue 40px;
+    backdrop-filter: 10px;
+    /*diar a cor pouco mais clarinha de efeito*/
+    box-shadow: 2px 2px 10px 1px  black;
+    border-radius: 0 0 0 0;
+    padding: 35px;
+  
+
+}
+
+/*AQUI BOTAO CADASTRAR*/
+.cadastrar {
+    display: inline-block; /* Para que possa ter largura e altura */
+    position: absolute;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: red; /* Exemplo de cor para a tag 'a' */
+    left: -33%;
+    top: 14%;
+    color: white;
+    width: 39%;
+   height: 5.7%;
+   border: none;
+   outline: none;
+     border-radius: 7px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 10px;/*move texto dentro do botao*/
+    
+
+}
+
+.cadastrar:hover {
+    background-color: yellow;
+}
+
+
+
+
+
+.formulario button {
+    display: inline-block;
+    position: absolute;
+    margin-top: 45%;
+    width: 39%;
+    height: 30px;
+    left: 53%;
+    border-radius: 7px;
+    border: none;
+    background-color:  green;
+    outline: none;
+    /*remover linha ao redor*/
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    font-weight: 600;
+    /*coloca um tom mais forte na cor*/
+}
+
+
+
+.formulario button:hover {
+    background-color: yellow;
+}
+
+
+.formulario h1 {
+    font-size: 25px;
+   
+    font-weight: 600;
+    margin-left: 22%;
+    margin-top: 10%;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+h1{
+    display: block;
+    position: absolute;
+    margin-top: 100%;
+
+}
+
+option{
+    display: inline;
+    position: absolute;
+    margin-left: -6%;
+}
+
+
+select{
+    position: absolute;
+    background-color:  rgba(73, 128, 139, 0.849);;
+    color: black;
+    margin-left: 7%;
+    font-weight: bold;
+    width: 80%;
+    height: 5%;
+    margin-top: 17%;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0);
+}
+
+
+
+.formulario a {
+    position: absolute;
+    display: block;
+    margin-left: 46%;
+    margin-top: 40%;
+    color: black;
+    font-weight: bold;
+
+}
+
+.formulario p {
+    position: absolute;
+    margin-left: 27.2%;
+    margin-top: 40%;
+    color: black;
+    font-weight: bold;
+
+}
+
+.input{
+    display: inline-block;
+    position: absolute;
+    margin-top: 23%;
+    width: 89%;
+    margin-left: 25%;
+    
+
+    
+}
+
+
+
+.formulario input {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    width: 90%;
+    right: 20%;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: black;
+    background-color: rgba(73, 128, 139, 0.849);
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+.formulario input::placeholder {
+    /* essa função consigo trocar a cor do texto que esta no imput*/
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    /*texto em negrito*/
+    margin-left: 2%;
+
+}
+
+
+
+.message {
+    padding: 15px;
+    margin-top: 53%; /* Espaçamento abaixo do formulário */
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: white; /* Cor do texto padrão para mensagens */
+    width: 80%; /* Largura da mensagem */
+    max-width: 1200%; /* Largura máxima */
+    position: relative; /* Posicionamento em relação ao fluxo normal */
+    left: 30%; /* Ajuda a centralizar */
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 999; /* Garante que fique acima de outros elementos, mas abaixo do loading */
+    display: none; /* Por padrão, a div de mensagem deve estar oculta, o JS a mostrará */
+}
+
+.message.success {
+    padding: 15px;
+    margin-top: 53%; /* Espaçamento abaixo do formulário */
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: white; /* Cor do texto padrão para mensagens */
+    width: 80%; /* Largura da mensagem */
+    max-width: 1200%; /* Largura máxima */
+    position: relative; /* Posicionamento em relação ao fluxo normal */
+    left: 30%; /* Ajuda a centralizar */
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    background-color: #4CAF50; /* Verde para sucesso */
+    border: 1px solid #388E3C;
+    z-index: 999; /* Garante que fique acima de outros elementos, mas abaixo do loading */
+    display: none;
+}
+
+.message.error {
+    margin-top: 53%; /* Espaçamento abaixo do formulário */
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: white; /* Cor do texto padrão para mensagens */
+    width: 80%; /* Largura da mensagem */
+    max-width: 1200%; /* Largura máxima */
+    position: relative; /* Posicionamento em relação ao fluxo normal */
+    left: 30%; /* Ajuda a centralizar */
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    background-color: red; /* Verde para sucesso */
+    border: 1px solid #388E3C;
+    z-index: 999; /* Garante que fique acima de outros elementos, mas abaixo do loading */
+    display: none;
+}
+    
+    /* Adicione uma animação de pulsação ou spinner aqui se quiser algo mais avançado */
+
+
+.bxs-user {
+    display: inline-block;
+    position: absolute;
+    margin-top: -8%;
+    margin-left: -23%;
+    color: black;
+}
+
+.bxs-lock-alt {
+    display: inline-block;
+    position: absolute;
+    margin-top: -8%;
+    margin-left: -23%;
+    color: black;
+}
+
+
+
+.link-registro p {
+    margin-top: 50%;
+    color: black;
+    left: 13%;
+    font-weight: bold;
+}
+
+.link-registro a {
+    display: inline-block;
+    position: absolute;
+    margin-left: 55%;
+    margin-top: 50%;
+    text-decoration: none;
+    color: black;
+    width: 90px;
+    height: 20px;
+    white-space: nowrap;
+    /*remove quebra de linha de uma palavra*/
+    background: transparent;
+    border-radius: 7px;
+    text-shadow: 10px;
+    font-weight: bold;
+
+}
+
+.link-registro a:hover {
+    color: rgb(57, 192, 57);
+
+}
+
+label{
+    position: absolute;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    margin-top: -6%;
+    margin-left: 25%;
+}
+
+
+option{
+    color: black;
+    font-weight: bold;
+}
+
+
+.formulario .logo-pm {
+    display: block;
+    width: 15%; /* Largura da logo */
+    max-width: 50%; /* Garante que não exceda 90% da largura do contêiner */
+    height: auto; /* Mantém a proporção */
+    margin: 20px auto; /* Centraliza a logo horizontalmente dentro de sua coluna */
+    margin-top: -5%;
+    opacity: 1; /* Removido a transparência para melhor visibilidade */
+    margin-left: 35%;
+    box-shadow: 0px 0px 0px 0px #ffff;
+       border: 2px solid #ffff;
+    border-radius: 0px 0 0 0px ;
+}
+
+
+img{
+    display: inline-block;
+    position: absolute;
+    width: 30%;
+    height: 100.5%;
+    margin-left: -35%;
+    margin-top: -5.3%;
+    opacity: 80%;
+    border-radius: 20px 0 0 20px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 10px 1px  black;
+}
+
+
+.pre{
+    display: inline-block;
+    position: absolute;
+    width: 30%;
+    height: 100.5%;
+    margin-left: 95.3%;
+    margin-top: -5.3%;
+    opacity: 80%;
+    border-radius: 0 20px 20px 0;
+    border: 2px solid black;
+     box-shadow: 2px 2px 10px 1px  black;
+}
+
+
+
+
+@media screen and (max-width:675px) {
+    .link-registro a {
+        top: 23.3%;
+        display: block;
+        position: absolute;
+    }
+
+    .formulario .chekbox {
+        bottom: 34%;
+        display: block;
+        position: absolute;
+
+    }
+
+}
+
+/* --- Media Query para Tablets e Celulares (telas com até 768px de largura) --- */
+@media screen and (max-width: 768px) {
+    /* 1. Mude o layout do body para empilhar os elementos */
+    body {
+        display: block; /* Mude para block para que o formulário ocupe a largura total */
+        padding: 10px; /* Reduza o padding em telas menores */
+    }
+
+    /* 2. Centralize o formulário e faça ele ocupar toda a largura */
+    .formulario {
+        width: 100%; /* Ocupa 100% da largura disponível */
+        max-width: 100%; /* Garante que não vaze */
+        /* Remova display: flex do .formulario se os filhos dele devem se empilhar
+           ou ajuste para que a direção seja coluna se for o caso
+        */
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    /* 3. Esconda as logos laterais para ganhar espaço */
+    .logo-lateral-esquerda,
+    .logo-lateral-direita {
+        display: none;
+    }
+
+    /* 4. Ajuste os inputs e o select para ocuparem a largura total */
+    .formulario input,
+    .formulario select,
+    .formulario button {
+        width: 100%;
+        margin: 10px 0; /* Espaçamento entre os campos */
+    }
+}
+
+
+/* --- Media Query para Celulares menores (telas com até 480px de largura) --- */
+@media screen and (max-width: 480px) {
+    /* 1. Ajuste fontes e padding para ficarem menores */
+    .formulario {
+        padding: 15px;
+    }
+    .formulario h1 {
+        font-size: 20px;
+    }
+    .formulario input,
+    .formulario select,
+    .formulario button {
+        height: 40px; /* Altura menor para campos */
+        font-size: 14px;
+    }
+    
+    /* 2. Ajuste o espaçamento de todos os elementos para telas menores */
+    .formulario p, .formulario a, .formulario label {
+        font-size: 12px;
+    }
+    .caixa-lembrar {
+        flex-direction: column; /* Empilha os elementos 'Lembre-me' */
+    }
+}
+
+@media screen and (max-width:500px) {
+    .link-registro a {
+        top: 15.4%;
+        display: block;
+        position: absolute;
+    }
+
+    .formulario .chekbox {
+        top: 35.7%;
+        display: block;
+        position: absolute;
+
+    }
+}
+
+@media screen and (max-width:400px) {/*s8 tela */
+
+    /*taanho da tela samsung s8*/
+    .link-registro a {
+        margin-top: 56%;
+
+    }   
+
+    .formulario .chekbox {
+        margin-top: 4%;
+        
+
+    }
+}
+
+
+    
+@media screen and (max-width:420px) {/*s9 tela */
+
+    /*taanho da tela samsung s9*/
+    .link-registro a {
+        margin-top: 62%;
+
+    } 
+
+
+    .formulario .chekbox {
+        margin-top: 17%;
+        
+
+    }
+    
+}
+
+
+
+
+
+
+/*
+@media screen and (max-width:507px) {
+    .link-registro a {
+        display: inline-block;
+        position: absolute;
+        left: 9%;
+        top: 61.5%;
+        text-decoration: none;
+
+
+    }
+
+    .formulario .chekbox {
+        position: absolute;
+        display: inline-block;
+        bottom: 42.2%;
+        left: 9.3%;
+        width: 10px;
+        height: 10px;
+    }
+
+}
+
+@media screen and (max-width:330px) {
+    .link-registro a {
+        display: inline-block;
+        position: absolute;
+        left: 9%;
+        top: 61.5%;
+        text-decoration: none;
+
+
+    }
+
+    .formulario .chekbox {
+        position: absolute;
+        display: inline-block;
+        bottom: 42.2%;
+        left: 9.3%;
+        width: 10px;
+        height: 10px;
+    }
+
+    @media screen and (min-width:430px) {
+        .formulario {
+            width: 300px;
+            height: 40%;
+
+
+        }
+
+
+        .link-registro a {
+            display: inline-block;
+            position: absolute;
+            left: 9%;
+            top: 61.5%;
+            text-decoration: none;
+
+
+        }
+
+        .formulario .chekbox {
+            bottom: 28.7%;
+            left: 12%;
+
+
+
+        }
+
+        .link-registro a {
+            top: 20;
+
+
+
+        }
+
+        .bxs-user {
+            left: 13%;
+            top: 42%;
+
+        }
+
+        .bxs-lock-alt {
+            left: 13%;
+            top: 58%;
+
+        }
+
+        .link-registro a {
+            left: 20%;
+            top: 80.9%;
+
+
+
+        }
+
+        .formulario a {
+            margin-top: -1%;
+        }
+
+
+    }
+}
+
+
+@media screen and (min-width:468px) {
+    .formulario {
+        width: 300px;
+        height: 40%;
+
+
+    }
+
+
+    .link-registro a {
+        display: inline-block;
+        position: absolute;
+        left: 9%;
+        top: 61.5%;
+        text-decoration: none;
+
+
+    }
+
+    .formulario .chekbox {
+        bottom: 28.7%;
+        left: 12%;
+
+
+
+    }
+
+    .link-registro a {
+        top: 20;
+
+
+
+    }
+
+    .bxs-user {
+        left: 13%;
+        top: 42%;
+
+    }
+
+    .bxs-lock-alt {
+        left: 13%;
+        top: 58%;
+
+    }
+
+    .link-registro a {
+        left: 20%;
+        top: 80.9%;
+
+
+
+    }
+
+    .formulario a {
+        margin-top: -1%;
+    }
+
+
+}

@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*   essa função busca la no goggle fontes  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    /*essa função busca la no goggle fontes*/
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+    padding: 20px;
+    /* overflow: hidden; /* Mantenha isso se quiser evitar barras de rolagem desnecessárias */
+
+    background-image: url('../assets/bandeiaJuazeiro.jpg');
+    background-size: cover; /* Mude de 100% 100% para cover */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* Opcional: Para manter o fundo fixo ao rolar */
+}
+
+img{
+    position: absolute;
+    display: inline-block;
+    width: 10%;
+    opacity: 80%;
+}
+
+
+
+
+ .formulario{
+    width: 1200px;
+    height: 800px;
+    position: static;
+    background-color: white;
+    border: 1px solid rgb(255, 255, 255, 0.2);;
+    backdrop-filter: blue 40px;
+    backdrop-filter: 10px;/*diar a cor pouco mais clarinha de efeito*/
+    box-shadow: 0 15px 32px rgba(0, 0, 0, 0.842);
+    border-radius: 16px;
+    padding: 35px;
+  
+
+
+ }
+
+  .formulario h1{
+    position: absolute;
+    display: inline-block;
+    font-size: 25px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    margin-left: 80%;
+    margin-top: -5%;
+    text-align: center;
+    color: black;
+ }
+
+h2{
+    position: absolute;
+    margin-top:10%;
+    margin-left: 4%;
+}
+
+h1{
+    display: inline-block;
+    position: absolute;
+    top: 35%;
+    left: -40%;
+}
+
+.img-top{
+    position: absolute;
+    display: block;   
+    top: 3.3%;
+    left: 43%;
+}
+
+
+
+
+ .caixa-fornulario{
+    position: relative ;
+    margin-bottom: 30px;
+                                                                      
+ }
+
+ .formulario input{
+    width: 90%;
+    display: block;
+    margin-bottom: 15px;
+    margin-left: 5%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: black;
+    background-color: rgba(13, 172, 97, 0.1);
+    font-size: 16px;
+    padding: 0 20px;
+ }
+
+ .formulario input::placeholder{/* essa função consigo trocar a cor do texto que esta no imput*/
+    color: black;
+    font-weight: bold;
+
+}
+
+.caixa-fornulario i{
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    top: 25%;
+
+
+}
+
+.caixa-lembrar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;/*espaçamente entre dois intes*/
+    margin-bottom: 25px;
+    font-size: 16px;
+
+
+}
+
+
+.caixa-form-cad-usuario{
+     display: inline-block;
+    position: absolute;
+    margin-top: 13%;
+    width: 82%;
+    margin-left: 4;
+
+}
+
+.caixa-form-cad-nomeGuerra{
+    display: inline-block;
+    position: absolute;
+    width: 40%;
+    margin-left: 2%;
+    margin-top: 22%;
+}
+
+.caixa-form-cad-matricula{
+    display: inline-block;
+    position: absolute;
+    width: 40%;
+    margin-left: 40%;
+    margin-top: 22%;
+
+
+}
+
+.caixa-form-cad-email{
+    display: block;
+    position: absolute;
+    margin-left: -.3%;
+    width: 82.5%;
+    margin-top: 30%;
+
+
+}
+
+.caixa-form-cad-cpf{
+    display: block;
+    position: absolute;
+  width: 40%;
+    margin-left: 40%;
+    margin-top: 40%;
+
+
+}
+
+.caixa-form-cad-senha{
+    display: block;
+    position: absolute;
+  width: 40%;
+    margin-left: 2%;
+    margin-top: 40%;
+
+
+}
+
+select{
+    position: absolute;
+    background-color:  rgba(73, 128, 139, 0.849);;
+    color: black;
+    margin-left: -14%;
+    font-weight: bold;
+    width: 50%;
+    margin-top: -0.3%;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0);
+}
+
+[for="nivelAcesso"]{
+    position: absolute;
+    color: black;
+    margin-top: -1;
+    margin-left: -35%;
+    font-weight: bold;
+    width: 40%;
+}
+
+
+.caixa-form-cad-nivelAcesso{
+    display: block;
+    position: absolute;
+    color: black;
+    width: 50%;
+    margin-left: 60%;
+    margin-top: 36.5%;
+
+}
+
+
+.caixa-lembrar a{
+   text-decoration: none ;/*remove sublinhado abaixo do texto*/
+    color:#fff;
+    z-index: 2;
+}
+
+.caixa-lembrar input{
+    accent-color: #372196;/*muda cor selecionada do check box*/
+    display: flex;
+    position: relative;
+    z-index: 2;
+    width: 15px;
+
+}
+
+.caixa-lembrar p{
+   margin-left: -12%;
+}
+
+.caixa-lembrar a::hover{
+    text-decoration: underline;/*marcar texto com linha a baixo do texto*/
+}
+
+/* -- Mensagens de sucesso/erro -- */
+.message {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: white; /* Cor do texto para as mensagens */
+    width: 100%; /* Ocupa a largura total para ser visível */
+    position: absolute; /* Posiciona a mensagem no topo ou abaixo do formulário */
+    bottom: 0; /* Exemplo: posiciona na parte inferior do formulário */
+    left: 0;
+    z-index: 1; /* Para que não fique na frente do botão ou imagem */
+}
+
+.message.success {
+     padding: 15px;
+    margin-top: 10px; /* Aumente este valor para descer mais a mensagem */
+    /* Você pode experimentar com valores como 5%, 80px, 100px, etc. */
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #4CAF50; /* Verde */
+    width: 75%;
+    max-width: 400px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 999;
+    display: none; /* Por padrão, deve estar oculta */
+    
+}
+
+.message.error {
+      padding: 15px;
+    margin-top: 10px; /* Aumente este valor para descer mais a mensagem */
+    /* Você pode experimentar com valores como 5%, 80px, 100px, etc. */
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: orangered;
+    width: 75%;
+    max-width: 400px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 999;
+    display: none; /* Por padrão, deve estar oculta */
+    
+
+
+
+}
+
+button{
+    display: inline-block;
+    position: relative;
+    margin-top: 60%;
+    width: 42%;
+    height: 30px;
+    left: 51%;
+    border-radius: 7px;
+    border: none;
+    background-color: green;
+    outline: none;/*remover linha ao redor*/
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    font-weight: 600;/*coloca um tom mais forte na cor*/
+    
+}
+
+button:hover{
+    background-color: yellow
+}
+
+.botao-voltar{
+    position: absolute;
+    display: inline-block;
+    left: 13%;
+    top: -12.4%;
+    width: 35%;
+    background: #f44336;
+
+}
+
+
+.link-registro p{
+    margin-top: 13px;
+    margin-left: 30%;
+    color: #fff;
+}
+
+.link-registro a{
+    display: inline-block;
+    position: absolute;
+    margin-left: 22%;
+    top: 82%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.link-registro a:hover{
+ color: yellow;
+}
+
+
+
+@media screen and (max-width:675px){
+    .link-registro a{
+        margin-left: 72%;
+        margin-top: 1%;
+  }
+
+    
+}

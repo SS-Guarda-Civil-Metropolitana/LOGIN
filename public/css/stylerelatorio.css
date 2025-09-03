@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*   essa função busca la no goggle fontes  */
+
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+     overflow-x: hidden;
+    
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    /*essa função busca la no goggle fontes*/
+}
+
+ .formulario{
+    margin-top: 20px;       /* Espaço no topo */
+    margin-bottom: 20px;
+    width: 1200%;
+    max-width: 98%;
+    height: 1300px;
+    position: static;
+    background-color: white;
+    border: 1px solid rgb(255, 255, 255, 0.2);;
+    backdrop-filter: blue 40px;
+    backdrop-filter: 10px;/*diar a cor pouco mais clarinha de efeito*/
+    box-shadow: 0 15px 32px rgba(0, 0, 0, 0.842);
+    border-radius: 16px;
+    padding: 35px;
+  
+
+ }
+
+
+.formulario h2{
+    position: absolute;
+    display: inline-block;
+    margin-top: 25%;
+    margin-left: 7%;
+}
+
+.formulario img{
+    position: absolute;
+    display: inline-block;
+    margin-top: -5%;
+}
+
+.container h1{
+    position: absolute;
+    margin-left: 1.5%;
+}
+
+
+.container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px blue;
+    text-align: center;
+    margin-top: 35%;
+    margin-left: 5%;
+    width: 90%;
+    height: 20%;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-left: -3%;
+    position: absolute;
+
+}
+
+button:hover {
+    background-color: rgb(43, 32, 189);
+}
+
+
+.butao {
+    display: inline-block;
+    position: absolute; /* Fixa o botão na tela, independentemente da rolagem */
+    top: 20px;       /* Posição a 20 pixels do topo da tela */
+    margin-left: 28%;
+    right: 20px;     /* Posição a 20 pixels da direita da tela */
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    background-color: blue; /* Fundo branco para a cor */
+    outline: none;
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px; /* Alinha o texto verticalmente no centro */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.butao:hover{
+     border-bottom: 4px solid blue;
+}
+
+
+
+/* Container principal */
+/* Container principal (a caixa azul com sombra) */
+.tabela {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    
+    background: #fff;
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px blue;
+    width: 90%;
+    height: 40%;
+    max-width: 1200px;
+    margin: 2% auto;
+}
+
+/* Título "Relatórios" */
+.tabela h2{
+    font-weight: bold;
+    margin-top:  -1%;
+    margin-left: -63%;
+}
+
+.tabela-headers{
+    margin-top: 5%;
+    width: 100%;
+    height: 90%;
+    margin-left: -1.1%;
+}
+
+/* Container do cabeçalho */
+.tabela-headers ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: -10%;
+   font-size: 12.5px;/*aqui diminui tamanhod da coluna da tabela*/
+    
+    display: flex; /* Habilita o Flexbox */
+    flex-direction: row;
+    width: 100%;
+    border: 1px solid #ccc; /* Borda da tabela inteira */
+    border-radius: 8px 8px 0 0; /* Apenas as bordas superiores */
+}
+
+/* Itens do cabeçalho */
+.tabela-headers li {
+    padding: 15px 10px;
+    background: #f9f9f9;
+    font-weight: bold;
+    text-align: center;
+    border-right: 1px solid #ccc; /* Borda da coluna */
+    flex: 1; /* Faz com que todos os itens tenham a mesma largura */
+    
+}
+
+.tabela-headers li:last-child {
+    border-right: none;
+}
+
+/* Container do conteúdo da tabela */
+.tabela-conteudo {
+     width: 100%;
+    border-left: 1px solid #ccc; /* Borda esquerda */
+    border-right: 1px solid #ccc; /* Borda direita */
+    border-bottom: 1px solid #ccc; /* Borda inferior */
+    border-radius: 0 0 8px 8px;
+
+    margin-left: -1%;
+    
+
+    /* --- ADICIONE ESTAS DUAS PROPRIEDADES --- */
+    max-height: 400px; /* Defina uma altura máxima para a tabela */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical se o conteúdo for maior que a altura máxima */
+}
+
+/* Linhas dos dados (serão criadas pelo JavaScript) */
+.tabela-conteudo .linha-dados {
+    display: flex; /* Habilita o Flexbox para cada linha de dados */
+    border-bottom: 1px solid #eee; /* Linha horizontal entre os dados */
+    cursor: pointer;
+}
+
+.tabela-conteudo .linha-dados:hover {
+    background-color: #f1f1f1;
+}
+
+/* Células dos dados (serão criadas pelo JavaScript) */
+.tabela-conteudo .celula-dados {
+    padding: 10px;
+    text-align: center;
+    border-right: 1px solid #eee; /* Linha vertical entre os dados */
+    flex: 1; /* Garante que as células se alinhem perfeitamente com o cabeçalho */
+}
+
+.tabela-conteudo .celula-dados:last-child {
+    border-right: none;
+}
+
+
+.container label{
+    margin-top: -4%;
+    margin-left: 5.2%;
+    
+}
+
+select{
+    background-color: #007bff;
+    position: absolute;
+    width: 35%;
+    height: 7%;
+    border: rgba(209, 53, 53, 0.2);
+    border-radius: 5px 5px 5px 5px;
+    margin-top: -2.5%;
+    margin-left: 5%;
+}
+
+.container #search-form input{
+    position: absolute;
+     margin-top: -2.5%;
+     margin-left: 1%;
+     width: 35%;
+}    
+    
+
+#search-form {/*aqui manipula inpute*/
+    margin-bottom: 8.5rem;
+    width: 90%;
+    margin-top: 10%;
+
+}
+
+#username {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+    margin-right: 0.5rem;
+    margin-top: 30%;
+   
+}
+
+
+
+
+.user-card {
+    border: 1px solid #eee;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    text-align: left;
+}
+
+#search-form input {
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+}
+
+.user-card {
+    /* ... (mesmo CSS do user-card) ... */
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaço entre a foto e o texto */
+}
+
+.user-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%; /* Para fotos circulares */
+    border: 2px solid #ddd;
+}
+

@@ -1,0 +1,764 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*   essa função busca la no goggle fontes  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    /*essa função busca la no goggle fontes*/
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+    padding: 20px;
+    /* overflow: hidden; /* Mantenha isso se quiser evitar barras de rolagem desnecessárias */
+
+    background-image: url('../assets/bandeiaJuazeiro.jpg');
+    background-size: 100%; /* Mude de 100% 100% para cover */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* Opcional: Para manter o fundo fixo ao rolar */
+}
+
+.foto-container {
+  width: 180px; /* Largura aproximada de uma foto 3x4, ajuste conforme necessário */
+  height: 210px; /* Altura aproximada de uma foto 3x4, ajuste conforme necessário */
+  border: 5px dashed  rgba(13, 172, 97, 0.1);
+  border-radius: 5px;
+  margin-left: 64%;
+  margin-top: 8%;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  overflow: hidden; /* Garante que a imagem não "vaze" do container */
+  position: absolute;
+  cursor: pointer;
+}
+
+.foto-container img {
+max-width: 100%; 
+margin-left: -73%;
+margin-top: -30%;/* Garante que a imagem não ultrapasse a largura do contêiner /
+max-height: 100%; / Garante que a imagem não ultrapasse a altura do contêiner /
+display: block; / Remove espaços extras abaixo da imagem */
+}
+
+.foto-label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 200px; /* Alinha o texto verticalmente, se necessário */
+
+}
+
+.foto-container  #foto{
+    color: black;
+    background-color: #f44336;
+}
+
+.placeholder {
+  font-size: 14px;
+}
+
+#input-foto {
+  /* Esconde o input de arquivo original, mas o mantém funcional */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.foto-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
+  display: none; /* Esconde a imagem inicialmente */
+}
+
+
+
+
+img{
+    position: absolute;
+    display: inline-block;
+    width: 10%;
+    opacity: 80%;
+}
+
+.img-top{
+    position: absolute;
+    display: block;   
+    top: 10%;
+    left: -10%;
+    width: 10%;
+}
+
+
+ .formulario{
+    width: 900%;
+    max-width: 98%;
+    height: 800px;
+    position: static;
+    background-color: white;
+    border: 1px solid rgb(255, 255, 255, 0.2);;
+    backdrop-filter: blue 40px;
+    backdrop-filter: 10px;/*diar a cor pouco mais clarinha de efeito*/
+    box-shadow: 0 15px 32px rgba(0, 0, 0, 0.842);
+    border-radius: 16px;
+    padding: 35px;
+  
+
+
+ }
+
+  .formulario h2{
+    position: absolute;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 4%;
+    margin-top: 2.3%;
+    text-align: center;
+    color: black;
+ }
+
+ .caixa-fornulario{
+    position: relative ;
+    margin-bottom: 30px;
+                                                                      
+ }
+
+ .formulario input{
+    width: 20%;
+    display: block;
+    margin-bottom: 15px;
+    margin-left: 5%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: black;
+    background-color: rgba(13, 172, 97, 0.1);
+    font-size: 16px;
+    padding: 0 20px;
+ 
+ }
+
+ .formulario input::placeholder{/* essa função consigo trocar a cor do texto que esta no imput*/
+    color: black;
+    
+
+}
+
+
+textarea {
+    position: absolute;
+    display: inline-block;
+    background-color: rgba(13, 172, 97, 0.1);
+    font-family: "Times New Roman", serif; /* Ou outra fonte serifada */
+  font-size: 16px;
+  line-height: 1.5; /* Espaçamento entre linhas */
+  border: 1px solid #ccc; /* Adiciona uma borda */
+  padding: 10px; /* Adiciona espaço interno */
+  width: 400px; /* Largura da caixa */
+  height: 200px; /* Altura da caixa */
+  resize: none; /* Impede o redimensionamento pelo usuário */
+  overflow: auto; /* Adiciona barras de rolagem se o texto exceder o tamanho */
+}
+
+
+.caixa-fornulario i{
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    top: 25%;
+
+
+}
+
+
+#nomeComp{
+    position: absolute;
+    display: inline-block;
+    width: 105%;
+    color: black;
+    margin-left: -35%;
+}
+.bxs-user{
+   position: absolute;
+   display: inline-block;
+   margin-left: -38%;
+   width: 20%;
+   color: blue ;
+   margin-top: 1.5%;
+
+}
+
+#vicios{
+    position: absolute;
+    display: inline-block;
+    width: 20%;
+    margin-top: 5.5%;
+    color: black;
+}
+
+.bx-plus-medical{
+    position: absolute;
+    display: inline-block;
+    margin-top: 7%;
+    margin-left: 3%;
+    color: blue;
+}
+
+#bolsafamilia{
+    position: absolute;
+    display: inline-block;
+    width: 30%;
+    margin-top: 9%;
+    margin-left: 30%;
+
+}
+
+.bxs-wallet{
+     position: absolute;
+     display: inline-block;
+    margin-top: 10.5%;
+    margin-left: 28%;
+    color: blue;
+}
+
+
+.bxs-group{
+    position: absolute;
+     display: inline-block;
+    margin-top: 2.3%;
+    margin-left: -7%;
+    color: blue;
+}
+
+.bxs-clinic{
+    position: absolute;
+    display: inline-block;
+    color: blue;
+    margin-left: 28%;
+    margin-top: -10%;
+}
+
+
+
+.bx-file-find{
+     position: absolute;
+     display: inline-block;
+    margin-top: 38%;
+    margin-left: -7%;
+    color: blue;
+}
+
+#entradacaps{
+  position: absolute;
+    display: block;
+    margin-top: -11%;
+    width: 30%;
+    margin-left: 30%;
+    
+}
+
+#informacao{  
+    display: inline-block;
+    position: absolute;
+    width: 30%;
+   height: 110px;
+   margin-top: 13.5%;
+   margin-left: 30%;
+   
+}
+
+.bxs-info-circle{
+    position: absolute;
+    display: inline-block;
+   color: blue;
+    margin-top: 19.5%;
+    margin-left: 28%;
+    height: 90%;
+
+}
+
+.bxs-user-pin{
+    color: blue;
+    margin-top: 1%;
+    margin-left: 3%;
+}
+
+.bxs-face{
+    color: blue;
+    margin-top: 1%;
+    margin-left: 3%;
+}
+
+.bxs-id-card{
+    display: block;
+    position: absolute;
+    color: blue;
+    margin-top: -4%;
+    margin-left: 3%;
+}
+
+
+#registropop{
+    position: absolute;
+    display: inline-block;
+    margin-left: -5%;
+    width: 30%;
+    margin-top: -5%;
+
+}
+
+.bxs-building-house{
+    position: absolute;
+     display: inline-block;
+    margin-top: -4%;
+    margin-left: -7%;
+    color: blue;
+}
+
+#endereco{
+    width: 89%;
+    margin-top: 8%;
+}
+
+.bxs-map{
+    display: inline-block;
+    position: absolute;
+    margin-top: -4%;
+    margin-left: 3%;
+    color: blue;
+}
+
+.bxs-city{
+    display: inline-block;
+    position: absolute;
+    margin-top: -4%;
+    margin-left: 3%;
+    color: blue;
+}
+
+
+
+#nome_mae{
+    display: block;
+    position: absolute;
+    width: 89%;
+   
+}
+
+#antecedentes{
+    position: absolute;
+    margin-top: 36.5%;
+    width: 30%;
+    left: -10%;
+}
+
+#vulgo{
+   position: absolute;
+    display: inline-block;
+    width: 30%;
+
+}
+
+
+#registropsocial{
+     position: absolute;
+    display: inline-block;
+    width: 30%;
+    margin-top: 1%;
+    margin-left: -5%;
+}
+
+.caixa-lembrar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;/*espaçamente entre dois intes*/
+    margin-bottom: 25px;
+    font-size: 16px;
+
+
+}
+
+
+
+.caixa-lembrar a{
+   text-decoration: none ;/*remove sublinhado abaixo do texto*/
+    color:#fff;
+    z-index: 2;
+}
+
+.caixa-lembrar input{
+    accent-color: #372196;/*muda cor selecionada do check box*/
+    display: flex;
+    position: relative;
+    z-index: 2;
+    width: 15px;
+
+}
+
+.caixa-lembrar p{
+   margin-left: -12%;
+}
+
+.caixa-lembrar a::hover{
+    text-decoration: underline;/*marcar texto com linha a baixo do texto*/
+}
+
+select{
+    position: absolute;
+    background-color:  rgba(232, 245, 252, 0.849);
+    color: black;
+    margin-left: 54%;
+    top: 40%;
+    /*font-weight: bold; // aqui deixa palavra em negrito*/
+    width: 15%;
+    height: 7%;
+    margin-top: -0.3%;
+    border-radius:  3%;
+    box-shadow: blue;
+   
+}
+
+
+#bolsa select{
+    position: absolute;
+    background-color:  rgba(232, 245, 252, 0.849);
+    color: black;
+    margin-left: 54%;
+    top: 40%;
+    /*font-weight: bold; // aqui deixa palavra em negrito*/
+    width: 15%;
+    height: 7%;
+    margin-top: 28%;
+    border-radius:  3%;
+    box-shadow: blue;
+   
+}
+
+#pop select{
+    position: absolute;
+    background-color:  rgba(232, 245, 252, 0.849);
+    color: black;
+    margin-left: 30%;
+    top: 40%;
+    /*font-weight: bold; // aqui deixa palavra em negrito*/
+    width: 15%;
+    height: 7%;
+    margin-top: 18%;
+    border-radius:  3%;
+    box-shadow: blue;
+   
+}
+
+
+
+
+label{
+    position: absolute;
+    display: block;
+    color: rgb(163, 23, 23);
+    left: 75%;
+    width: 90%;
+    height: 30%;
+    top: 15%;
+}
+
+button{
+    display: inline-block;
+    position: absolute;
+    margin-top: 50%;
+    width: 35%;
+    height: 30px;
+    left: 54%;
+    border-radius: 7px;
+    border: none;
+    background-color: green;
+    outline: none;/*remover linha ao redor*/
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    font-weight: 600;/*coloca um tom mais forte na cor*/
+    
+}
+
+button:hover{
+    background-color: yellow
+}
+
+.butao-voltar{
+    display: inline-block;
+    position: absolute;
+    margin-left: -45%;
+    background-color: red;
+
+}
+
+.but-voltar{
+    color: black;
+    background-color: red;
+    position: absolute;
+    display: inline-block;
+    margin-top: 23%;
+    margin-left: -45%;
+}
+
+
+
+.link-registro p{
+    margin-top: 13px;
+    margin-left: 50%;
+    color: #fff;
+}
+
+.link-registro a{
+    display: inline-block;
+    position: absolute;
+    margin-left: 62%;
+    top: 82%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.link-registro a:hover{
+ color: yellow;
+}
+
+.caixa-form-cad-entrada_pop{
+    display: block;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: -33%;
+    width: 90%;
+}
+
+label{
+    display: inline-block;
+    position: absolute;
+    margin-left: -2%;
+    margin-top: 10%;
+}
+
+.caixa-form-cad-entrada_psocial{
+    display: block;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: -28%;
+    width: 90%;
+}
+
+.caixa-form-cad-entrada_caps{
+      display: block;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: -20%;
+    width: 90%;
+}
+
+
+
+.caixa-form-cad-antecedentes{
+     display: block;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: -10%;
+    width: 90%;
+}
+
+.caixa-form-cad-vicios{
+     display: block;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: -5%;
+    width: 90%;
+}
+.caixa-form-cad-bolsa_familia{
+    display: block;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: -24%;
+    width: 90%; 
+}
+
+.caixa-form-cad-nome{
+    display: block;
+    position: absolute;
+    margin-left: 25.5%;
+    margin-top: 8%;
+    width: 62%;
+}
+.caixa-form-cad-vulgo{
+    display: block;
+    position: absolute;
+    margin-left: -0.5%;
+    margin-top: 14%;
+    width: 90%;
+}
+
+.caixa-form-cad-nome-mae{
+    display: block;
+    position: absolute;
+    margin-left: -0.5%;
+    margin-top: 20%;
+    width: 74%;
+}
+
+.caixa-form-cad-cpf{
+     display: block;
+    position: absolute;
+    margin-left: -0.5%;
+    margin-top: 26%;
+    width: 90%;
+}
+
+.caixa-form-cad-rg{
+       display: block;
+    position: absolute;
+    margin-left: -0.5%;
+    margin-top: 32%;
+    width: 90%;  
+}
+
+.caixa-form-cad-endereco{
+    display: block;
+    position: absolute;
+    margin-left: -0.5%;
+    margin-top: 30%;
+    width: 90%; 
+}
+
+.caixa-form-cad-naturalidade{
+    display: block;
+    position: absolute;
+    margin-left: -0.5%;
+    margin-top: 43%;
+    width: 90%; 
+}
+
+.caixa-form-cad-bolsa_familia{
+    display: block;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 35%;
+    width: 90%; 
+}
+
+.caixa-form-cad-entrada_pop{
+     display: block;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 36%;
+    width: 90%; 
+}
+
+.caixa-form-cad-entrada_psocial{
+    display: block;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 25%;
+    width: 90%; 
+}
+
+.caixa-form-cad-entrada_caps{
+    display: block;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 23.5%;
+    width: 90%; 
+}
+
+.caixa-form-cad-informacao{
+   display: block;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 15%;
+    width: 90%;  
+}
+
+.caixa-form-cad-antecedentes{
+    display: block;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 10%;
+    width: 90%; 
+}
+
+.caixa-form-cad-vicios{
+    display: block;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 9%;
+    width: 90%; 
+}
+
+
+/* -- Mensagens de sucesso/erro -- */
+.message {
+    padding: 10px;
+    margin-top: 50%;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: white; /* Cor do texto para as mensagens */
+    width: 100%; /* Ocupa a largura total para ser visível */
+    height: 5%;
+    position: absolute; /* Posiciona a mensagem no topo ou abaixo do formulário */
+    bottom: 0; /* Exemplo: posiciona na parte inferior do formulário */
+    left: 0;
+    z-index: 1; /* Para que não fique na frente do botão ou imagem */
+}
+
+.message.success {
+    position: absolute;
+    background-color: green; /* Verde */
+    top: 18%;
+
+}
+
+.message.error {
+    background-color: #f44336; /* Vermelho */
+
+}
+
+img{
+    display: block;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: -3%;
+    width: 40%;
+    transform: scaleX(-1);
+}
+.nome {
+    display: block;
+    position: absolute;
+    margin-left: 5.2%;
+    margin-top: -1.5%;
+    color: black;
+}
+
+
+
+@media screen and (max-width:675px){
+    .link-registro a{
+        margin-left: 72%;
+        margin-top: 1%;
+  }
+
+    
+}

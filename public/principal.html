@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylespricinpal.css">
+    <title>Polícia Municipal</title>
+</head>
+<body>
+
+    <nav>    
+    <div class="cor-menu-top">
+    <h1>Bem-vindo à Polícia Municipal!</h1>
+    </div>
+
+    <div class="logo-menu">
+        <img src="assets/logo.jpeg" alt="">
+    </div>
+    <div>
+    <a href="index.html"><button>SAIR</button></a>
+</div>
+
+ <div id="menu-man">
+        <ul class="menu">
+          <li><a href="#">HOME</a></li>
+
+</div>
+ <div class="menu-man0">
+        <ul class="menu0">
+        </div>
+      <div class="m0">  
+  <li class="dropd">
+    <a class="dropbtn0">Cadastro</a>
+    <div class="dropdo-content0">
+      <a href="http://localhost:3001/cadUsuario.html">Cadastrar-Policia</a>
+      <a href="http://localhost:3001/cadMoradorRua.html">Morador-Rua</a>
+      
+    </div>
+    </div>
+   <button class="navbar__toggle" aria-label="Menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  </ul>
+  </div>
+
+
+
+
+ <div class="menu-man1">
+        <ul class="menu1">
+        </div>
+      <div class="m1">  
+  <li class="dropd">
+    <a class="dropbtn1">Grupamento</a>
+    <div class="dropdo-content1">
+      <a href="http://localhost:3001/mariaPenha.html">Maria da Penha</a>
+      <a href="http://localhost:3001/rope.html">Rope</a>
+      <a href="http://localhost:3001/gptram.html">Gpetran</a>
+      <a href="http://localhost:3001/gam.html">GAM</a>
+    </div>
+    </div>
+   <button class="navbar__toggle" aria-label="Menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  </ul>
+  </div>
+
+  <div class="menu-man2">
+        <ul class="menu2">
+        </div>
+      <div class="m2">  
+  <li class="dropd">
+    <a class="dropbtn2">Escala</a>
+    <div class="dropdo-content2">
+      <a href="http://localhost:3001/cadUsuario.html">Normal</a>
+      <a href="http://localhost:3001/cadUsuario.html">Extra</a>
+      <a href="http://localhost:3001/cadUsuario.html">Banco</a>
+    </div>
+   <button class="navbar__toggle" aria-label="Menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  </ul>
+  </div>
+
+    <div class="menu-man3">
+        <ul class="menu3">
+        </div>
+      <div class="m3">
+  <li class="dropd">
+    <a class="dropbtn3">Relatorio</a>
+    <div class="dropdo-content3">
+      <a href="http://localhost:3001/relatarioMrua.html">Morador de Rua</a>
+      <a href="http://localhost:3001/cadUsuario.html">Realatorio de Serviço</a>
+    </div>
+   <button class="navbar__toggle" aria-label="Menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  </ul>
+  </div>
+    </nav>
+
+    <aside>
+      <div id="menu-lateral">
+          <h1></h1>        
+      </div>
+    </aside>
+</body>
+
+
+
+<script>//aqui ta trecho do codigo da tabela do menu//
+    document.querySelectorAll('.dropdown').forEach(item => {
+  item.addEventListener('click', event => {
+    const dropdownContent = item.querySelector('.dropdown-content');
+    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+  });
+});
+</script>
+</html>

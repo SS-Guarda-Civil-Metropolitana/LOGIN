@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ocorrencia.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Cadastro Ocorrencia - Polícia Municipal</title>
+
+</head>
+
+<body>
+    <div class="estrelas"></div>
+    <div class="formulario">
+        <h2>Relatorio de Ocorrencia</h2>
+        <img src="assets/Logo-Gtm.png" class="img-top">
+
+
+        <form id="relatorios">
+            <div class="foto-container">
+                <label for="input-foto" nonce="foto" class="foto-label">
+                <span class="placeholder">registrar</span>
+                <img id="preview-foto" src="#" alt="Pré-visualização da foto 3x4" class="foto-preview">
+                </label>
+                <input type="file" upload.singl="input-foto"  id="input-foto" accept="image/*">
+            </div>
+           
+            <div id="Relatorio-Operacional" >
+            <div class="caixa-form-cad-date">
+                <label>Data | Horario da Ocorrencia</label>
+                <input type="datetime-local" id="date" placeholder="data" name="date" required>
+            </div>
+
+                <div id="ocorrencia"><!--aqui tem que buscar a informações do banco-->
+                    <label class="Nat-ocorrencia">Natureza da Ocorrencia</label>
+                    <select name="Natureza-da-ocorrecia" multiple="Natureza">
+                     <input type="text" class="local">
+                    </select>
+                    <label class="localizacao">Local da Ocorrencia</label>
+                    <button type="button" class="selecionar">Selecionar Toda Natureza</button> 
+                    <button type="button" class="deletar">Deletar Selecionados</button> 
+                </div>
+                </div>
+
+
+                
+                  <div id="dados-do-conduzido"><!--aqui tem que buscar a informações do banco-->
+                    <label class="dados-suspeito">DADOS DO SUSPEITO</label>
+                    <label class="nome">Nome:</label>
+                    <input type="text" class="nome-suspeito">
+                    <label class="data-nasc">Data de Nascimento:</label>
+                    <input type="date" class="date-nasc" id="data-nascido" placeholder="nascimento" name="nomeCompleto" required>
+                    <label class="cpf">CPF do Suspeito:</label>
+                    <input type="text" class="cpf-suspeito">
+                    <label class="nome-mae">Nome da Mae do Suspeito:</label>
+                    <input type="text" class="nome-mae-suspeito">
+                    <h4>Todas informçõess sao completamente sigilosas</h4>
+                    <h6>toda insakfnaslkjdsajdaskljdsadjasdsdklj</h6>
+                </div>
+                
+                </div>
+
+            
+            <!-- <div>
+                <img src="./assets/moradorderua2.png" alt="Morador de Rua"> </div>-->
+                <div>
+            <button type="submit" id="botao-salvar">Salvar</button>
+               </div>
+
+
+    </div>
+    <div>
+        <a href="http://localhost:3001/index.html"><button type="button" class="but-voltar">Voltar</button></a>
+    </div>
+    </form>
+
+    <div id="form-message" class="message" style="display: none;"></div>
+    </div>
+
+   <script>
+        document.getElementById('input-foto').addEventListener('change', function (event) {
+            const preview = document.getElementById('preview-foto');
+            const placeholder = document.querySelector('.placeholder');
+
+            // Verifica se um arquivo foi selecionado
+            if (event.target.files && event.target.files[0]) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    // Exibe a imagem selecionada
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                    placeholder.style.display = 'none'; // Oculta o texto inicial
+                };
+
+                // Lê o arquivo como uma URL de dados
+                reader.readAsDataURL(event.target.files[0]);
+            } else {
+                // Se nenhum arquivo foi selecionado, retorna ao estado inicial
+                preview.src = '#';
+                preview.style.display = 'none';
+                placeholder.style.display = 'block';
+            }
+        });
+</script>
+
+</body>
+
+</html>

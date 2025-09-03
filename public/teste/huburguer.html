@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stkes.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <nav class="menu">
+  <div class="menu__logo">
+    <h1>Bem-vindo à Polícia Municipal!</h1>
+    <img src="../assets/logo.jpeg" alt="">
+  </div>
+  <ul class="menu__links">
+    <li><a href="#">CADASTRO_POLICIA</a></li> 
+    <div>
+    <span class="sub-menu-item">GRUPAMENTO</span>
+    <ul class="submenu">
+      <li> <a href="# "> MARIA DA PENHA</li></a>
+      <li><a href="#" style="text-decoration: none">ROPE</li></a> 
+      <li><a href="#">GTM</li></a> 
+      <li><a href="#">GPTRAN</li></a> 
+      <li><a href="#">GAM</li></a> 
+    </ul>
+  </div>
+    <li><a href="#">Contato</a></li>
+  </ul>
+  <button class="menu__hanburguer" aria-label="Menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+</nav>
+</body>
+<script>
+   
+const menu__hanburguer = document.querySelector('.menu__hanburguer ');
+const menu__links = document.querySelector('.menu__links');
+
+  menu__hanburguer.addEventListener('click', () => {
+  menu__links.classList.toggle('active');
+  menu__hanburguer.classList.toggle('active');
+
+  const clickOpcao = document.querySelector('.sub-menu-item');
+  const submenu = document.querySelector('.submenu');
+
+  clickOpcao.addEventListener('click', () => {
+  submenu.classList.toggle('active');
+});
+
+
+});
+</script>
+</html>

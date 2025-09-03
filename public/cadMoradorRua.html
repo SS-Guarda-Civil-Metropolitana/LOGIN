@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sltyles_m_rua.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Cadastro Morador de Rua - Polícia Municipal</title>
+
+</head>
+
+<body>
+    <div class="estrelas"></div>
+    <div class="formulario">
+        <h2>Cadastro Morador de Rua</h2>
+        <img src="assets/logo-policia.jpeg" class="img-top">
+
+
+        <form id="cadMoradorRuaForm">
+            <div class="foto-container">
+                <label for="input-foto" nonce="foto" class="foto-label">
+                <img id="preview-foto" src="#" alt="Pré-visualização da foto 3x4" class="foto-preview">
+                <span id="foto">foto</span>    
+            </label>
+                <input type="file" id="input-foto" name="imagen" accept="image/*">
+            </div>
+
+            <div class="caixa-form-cad-nome">
+                <input type="text" id="nomeComp" placeholder="Nome Completo" name="nomeCompleto" required>
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <div class="caixa-form-cad-vulgo">
+                <input type="text" id="vulgo" placeholder="vulgo" name="vulgo" required>
+                <i class='bx bxs-user-pin'></i>
+            </div>
+
+            <div class="caixa-form-cad-nome-mae">
+                <input type="text" id="nome_mae" placeholder="mae" name="nomeMae" required>
+                <i class='bx bxs-face'></i>
+            </div>
+
+            <div class="caixa-form-cad-cpf">
+                <input type="text" id="cpf" name="cpf" placeholder="CPF" maxlength="11" required>
+                <i class='bx bxs-id-card'></i>
+            </div>
+
+            <div class="caixa-form-cad-rg">
+                <input type="text" id="rg" placeholder="RG" name="rg" required>
+                <i class='bx bxs-id-card'></i>
+            </div>
+
+            <div class="caixa-form-cad-endereco">
+                <input type="text" id="endereco" placeholder="endereço" name="endereco" required>
+                <i class='bx bxs-map'></i>
+            </div>
+
+            <div class="caixa-form-cad-naturalidade">
+                <input type="text" id="naturalidade" placeholder="natural" name="naturalidade" required>
+                <i class='bx bxs-city'></i>
+            </div>
+
+            <div class="caixa-form-cad-vicios">
+                <input type="text" id="vicios" placeholder="vicios" name="vicios" required>
+                <i class='bx bx-plus-medical'></i>
+            </div>
+
+
+            <div class="caixa-form-cad-antecedentes">
+                <input type="text" id="antecedentes" placeholder="antecedentes:" name="antecedentes">
+                <i class='bx bx-file-find'></i>
+            </div>
+
+            <div class="caixa-form-cad-informacao">
+                <textarea name="informacao" id="informacao" placeholder="Informações Adicionais:"></textarea>
+             <i class='bx bxs-info-circle'></i>
+            </div>
+
+            <div>
+             <select id="caps" name="entradacaps" required><!--aqui requered compara com server e banco de dados-->
+                <option value="entradacapsS" selected>Entrada Caps</option>
+                <option value="sim">sim</option>
+                <option value="nao">nao</option>
+                <i class='bx bxs-clinic'></i>
+            </select>
+        
+            </div>
+            <!--
+            <div class="caixa-form-cad-entrada_caps">
+                <input type="text" id="entradacaps" placeholder="caps:" name="entradacaps">
+                <i class='bx bxs-clinic'></i>
+            </div>-->
+
+
+             <div id="pop" >
+             <select id="caps" name="registropop" required><!--aqui requered compara com server e banco de dados-->
+                <option value="registropop" selected>Entrada pop</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+                <i class='bx bxs-clinic'></i>
+            </select>
+            </div>
+           
+
+
+              <div id="bolsa" >
+             <select id="caps" name="bolsafamilia" required><!--aqui requered compara com server e banco de dados-->
+                <option value="beneficio" selected>Beneficio</option>
+                <option value="bolsa-familia">Bolsa Familia</option>
+                <option value="situção-rua">Bolsa Situação de Rua</option>
+                <option value="bpc">Bolsa BPC</option>
+                 <option value="auxilio-brasil">Auxilio Brasil</option>
+                <i class='bx bxs-clinic'></i>
+            </select>
+            </div>
+
+        <!--
+            <div class="caixa-form-cad-bolsa_familia">
+                <input type="text" id="bolsafamilia" placeholder="bolsa:" name="bolsafamilia">
+                <i class='bx bxs-wallet'></i>
+            </div>-->
+
+            
+
+            <div class="caixa-form-cad-entrada_psocial">
+                <input type="text" id="registropsocial" placeholder="Nome social:" name="registropsocial">
+                <i class='bx bxs-group'></i>
+            </div>
+
+            <!-- <div>
+                <img src="./assets/moradorderua2.png" alt="Morador de Rua"> </div>-->
+
+            <button type="submit" id="botao-salvar">Salvar</button>
+
+
+    </div>
+    <div>
+        <a href="http://localhost:3001/index.html"><button type="button" class="but-voltar">Voltar</button></a>
+    </div>
+    </form>
+
+    <div id="form-message" class="message" style="display: none;"></div>
+    </div>
+
+    <script>
+        document.getElementById('input-foto').addEventListener('change', function (event) {
+    const preview = document.getElementById('preview-foto');
+    const fotoText = document.getElementById('foto'); // Seleciona o elemento "foto"
+
+    // Verifica se um arquivo foi selecionado
+    if (event.target.files && event.target.files[0]) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            // Exibe a imagem selecionada e esconde o texto
+            preview.src = e.target.result;
+            preview.style.display = 'block';
+            if (fotoText) {
+                fotoText.style.display = 'none';
+            }
+        };
+
+        reader.readAsDataURL(event.target.files[0]);
+    } else {
+        // Se nenhum arquivo foi selecionado, retorna ao estado inicial
+        preview.src = '#';
+        preview.style.display = 'none';
+        if (fotoText) {
+            fotoText.style.display = 'block';
+        }
+    }
+});
+
+
+        document.getElementById('cadMoradorRuaForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            console.log("Dados enviados (frontend):", data);
+
+            let messageDiv = document.getElementById('form-message');
+            if (!messageDiv) {
+                messageDiv = document.createElement('div');
+                messageDiv.id = 'form-message';
+                messageDiv.className = 'message';
+                form.parentNode.insertBefore(messageDiv, form.nextSibling);
+            }
+            messageDiv.style.display = 'none';
+            messageDiv.classList.remove('success', 'error');
+            messageDiv.textContent = '';
+
+           fetch('http://localhost:3001/api/moradores', {
+            method: 'POST',
+            body: formData, // Envie o FormData diretamente
+    // Remova o headers, o navegador irá definir o Content-Type: multipart/form-data
+})
+                .then(response => {
+                    console.log("Resposta HTTP:", response.status, response.statusText);
+                    if (!response.ok) {
+                        return response.json().then(err => {
+                            throw new Error(err.message || `Erro do servidor: ${response.status}`);
+                        }).catch(() => {
+                            throw new Error(`Erro do servidor: ${response.status}. Resposta não é JSON ou erro ao parsear.`);
+                        });
+                    }
+                    return response.json();
+                })
+                .then(result => {
+                    console.log("Resultado do backend:", result);
+                    if (result.success) {
+                        messageDiv.classList.add('success');
+                        messageDiv.textContent = result.message;
+                        form.reset();
+
+                        setTimeout(() => {// esse trecho apaga a mensagem do retorno do banco ao cadastrar ou salvar com sucesso
+                            messageDiv.style.display = 'none';
+                            messageDiv.textContent = '';
+                            messageDiv.classList.remove('success', 'error');
+                        }, 3000);
+
+                    } else {
+                        messageDiv.classList.add('error');
+                        messageDiv.textContent = result.message;
+                    }
+                    messageDiv.style.display = 'block';
+                })
+                .catch(error => {
+                    console.error('Erro na requisição (frontend):', error);
+                    messageDiv.classList.add('error');
+                    messageDiv.textContent = error.message || 'Erro ao conectar com o servidor. Verifique o console do navegador e do backend.';
+                    messageDiv.style.display = 'block';
+                });
+        });
+    </script>
+</body>
+
+</html>

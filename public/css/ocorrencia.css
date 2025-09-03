@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*   essa função busca la no goggle fontes  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    /*essa função busca la no goggle fontes*/
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+    padding: 20px;
+    /* overflow: hidden; /* Mantenha isso se quiser evitar barras de rolagem desnecessárias */
+
+    background-image: url('../assets/bandeiaJuazeiro.jpg');
+    background-size: 100%; /* Mude de 100% 100% para cover */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* Opcional: Para manter o fundo fixo ao rolar */
+}
+
+.foto-container {
+  width: 150px; /* Largura aproximada de uma foto 3x4, ajuste conforme necessário */
+  height: 180px; /* Altura aproximada de uma foto 3x4, ajuste conforme necessário */
+  border: 2px dashed #3a098a;
+  border-radius: 5px;
+  margin-left: 55%;
+  margin-top: -1%;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  overflow: hidden; /* Garante que a imagem não "vaze" do container */
+  position: absolute;
+  cursor: pointer;
+}
+
+.foto-container img {
+max-width: 100%; 
+margin-left: -3%;/* Garante que a imagem não ultrapasse a largura do contêiner /
+max-height: 100%; / Garante que a imagem não ultrapasse a altura do contêiner /
+display: block; / Remove espaços extras abaixo da imagem */
+}
+
+.foto-label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 200px; /* Alinha o texto verticalmente, se necessário */
+  color: #888;
+}
+
+.placeholder {
+  font-size: 14px;
+}
+
+#input-foto {
+  /* Esconde o input de arquivo original, mas o mantém funcional */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.foto-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
+  display: none; /* Esconde a imagem inicialmente */
+}
+
+
+
+
+img{
+    position: absolute;
+    display: inline-block;
+    width: 10%;
+    opacity: 40%;
+}
+
+.img-top{
+    position: absolute;
+    display: block;   
+    top: 10%;
+    left: -10%;
+    width: 10%;
+}
+
+
+ .formulario{
+    width: 900%;
+    max-width: 98%;
+    height: 1400px;
+    position: static;
+    background-color: white;
+    border: 1px solid rgb(255, 255, 255, 0.2);;
+    backdrop-filter: blue 40px;
+    backdrop-filter: 10px;/*diar a cor pouco mais clarinha de efeito*/
+    box-shadow: 0 15px 32px rgba(0, 0, 0, 0.842);
+    border-radius: 16px;
+    padding: 35px;
+  
+
+
+ }
+
+  .formulario h2{
+    position: absolute;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 4%;
+    margin-top: 2.3%;
+    text-align: center;
+    color: black;
+ }
+
+ .caixa-fornulario{
+    position: relative ;
+    margin-bottom: 30px;
+                                                                      
+ }
+
+ .formulario input{
+    width: 20%;
+    display: block;
+    margin-bottom: 15px;
+    margin-left: 5%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: black;
+    background-color: rgba(13, 172, 97, 0.1);
+    font-size: 16px;
+    padding: 0 20px;
+ 
+ }
+
+ .formulario input::placeholder{/* essa função consigo trocar a cor do texto que esta no imput*/
+    color: black;
+    
+
+}
+
+.caixa-fornulario i{
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    top: 25%;
+
+
+}
+
+
+
+
+.caixa-lembrar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;/*espaçamente entre dois intes*/
+    margin-bottom: 25px;
+    font-size: 16px;
+
+
+}
+
+
+
+.caixa-lembrar a{
+   text-decoration: none ;/*remove sublinhado abaixo do texto*/
+    color:#fff;
+    z-index: 2;
+}
+
+.caixa-lembrar input{
+    accent-color: #372196;/*muda cor selecionada do check box*/
+    display: flex;
+    position: relative;
+    z-index: 2;
+    width: 15px;
+
+}
+
+.caixa-lembrar p{
+   margin-left: -12%;
+}
+
+.caixa-lembrar a::hover{
+    text-decoration: underline;/*marcar texto com linha a baixo do texto*/
+}
+
+button{
+    display: inline-block;
+    position: absolute;
+    margin-top: 89.2%;
+    width: 35%;
+    height: 30px;
+    left: 54%;
+    border-radius: 7px;
+    border: none;
+    background-color: green;
+    outline: none;/*remover linha ao redor*/
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    font-weight: 600;/*coloca um tom mais forte na cor*/
+    
+}
+
+button:hover{
+    background-color: yellow
+}
+
+.butao-voltar{
+    display: inline-block;
+    position: absolute;
+    margin-left: -45%;
+    background-color: red;
+
+}
+
+.but-voltar{
+    color: black;
+    background-color: red;
+    position: absolute;
+    display: inline-block;
+    margin-top: 40%;
+    margin-left: -45%;
+}
+
+.link-registro p{
+    margin-top: 13px;
+    margin-left: 50%;
+    color: #fff;
+}
+
+.link-registro a{
+    display: inline-block;
+    position: absolute;
+    margin-left: 62%;
+    top: 82%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.link-registro a:hover{
+ color: yellow;
+}
+
+
+
+
+
+#Relatorio-Operacional .caixa-form-cad-date{
+    display: inline-block;
+    position: absolute;
+    margin-left: -3.2%;
+    margin-top: 17%;
+    width: 100%;
+    z-index: 2;
+  
+
+}
+
+#Relatorio-Operacional .caixa-form-cad-date input{
+    background-color: rgba(0, 0, 255, 0.281);
+    box-shadow: 0 4px 8px blue;
+    
+    
+}
+
+/*inicio dos LABELs*/
+#Relatorio-Operacional .caixa-form-cad-date label{
+    display: inline-block;
+    position: absolute;
+    margin-left: 5.2%;
+    margin-top: -1.5%;
+    z-index: 2;
+    font-weight: bold;
+}
+/*fim dos LABELs*/
+
+
+#ocorrencia {
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px blue;
+    text-align: center;
+    margin-top: 15%;
+    margin-left: -0.3%;
+    width: 90%;
+    height: 150%;
+    z-index: 1;
+}
+
+#ocorrencia .Nat-ocorrencia{/*label nat-ocorrencia*/
+    display: inline-block;
+    position: absolute;
+    margin-left: -81.8%;
+    margin-top: 6%;
+    width: 85%;
+    height: 8%;
+    font-weight: bold;
+    
+}
+
+#ocorrencia .localizacao{/*aqui label localização*/
+    display: inline-block;
+    position: absolute;
+    margin-left: -33.7%;
+    margin-top: -1.6%;
+    width: 85%;
+    height: 8%;
+    font-weight: bold;
+    
+}
+
+#ocorrencia select{
+    display: inline-block;
+    position: absolute;
+    margin-left: -47.5%;
+    box-shadow: 0 4px 8px blue;
+    margin-top: 8%;
+    width: 95%;
+    height: 5%;
+
+}
+#ocorrencia .selecionar{
+    position: absolute;
+    display: inline-block;
+    margin-top: 12.5%;
+    margin-left: -51.6%;
+    width: 45%;
+    height: 5%;
+    background-color: blue;
+   
+}
+
+#ocorrencia .selecionar:hover{
+    background-color: #2014ca;
+}
+
+
+#ocorrencia .deletar{
+    position: absolute;
+    display: inline-block;
+     margin-top: 12.5%;
+    margin-left: -1.3%;
+    width: 45%;
+    height: 5%;
+    background-color: blue;
+   
+}
+
+#ocorrencia .deletar:hover{
+    background-color: #f44336;
+}
+
+#ocorrencia input{
+    position: absolute;
+    display: inline-block;
+    width: 45%;
+    margin-left: 2%;
+    box-shadow: 0 4px 8px blue;
+
+}
+
+
+#ocorrencia .local{
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+   
+
+}
+
+
+
+span{/*manipula frase dentro da foto*/
+    color: #f44336;
+    font-size: 2px;
+    margin-top: -35%;
+    margin-left: -20%;
+    position: absolute;
+}
+
+
+
+
+#dados-do-conduzido .dados-suspeito{
+    display: inline-block;
+    position: absolute;
+    margin-top: 35%;
+    margin-left: 2%;
+    border-radius: 5;
+    width: 85%;
+    box-shadow: 0px 1px 0px 0px blue;
+    z-index: 1;
+    font-weight: bold;
+}
+
+#dados-do-conduzido .nome-suspeito{
+    display: inline-block;
+    position: absolute;
+    margin-top: 40%;
+    margin-left: 2%;
+    box-shadow: 0 4px 8px blue;
+    width: 85%;
+    z-index: 1;
+    font-weight: bold;
+}
+
+#dados-do-conduzido .nome{
+    display: inline-block;
+    position: absolute;
+    margin-top: 38.5%;
+    margin-left: 2.2%;
+    z-index: 1;
+    
+}
+
+#dados-do-conduzido .date-nasc{
+    display: inline-block;
+    position: absolute;
+    margin-top: 48.5%;
+    margin-left: 2%;
+    width: 40%;
+    height: 9%;
+    box-shadow: 0 4px 8px blue;
+    z-index: 1;
+    
+}
+
+
+#dados-do-conduzido .data-nasc{
+    display: inline-block;
+    position: absolute;
+    margin-top: 46.9%;
+    margin-left: 2.3%;
+    width: 40%;
+    height: 9%;
+    z-index: 1;
+    
+}
+
+#dados-do-conduzido .cpf{
+    display: inline-block;
+    position: absolute;
+    margin-top: 54.9%;
+    margin-left: 2.3%;
+    border-radius: 10px;
+    
+    width: 40%;
+    height: 9%;
+    z-index: 1;
+    
+}
+
+#dados-do-conduzido .cpf-suspeito{
+    display: inline-block;
+    position: absolute;
+    margin-top: 56.5%;
+    margin-left: 2.3%;
+    box-shadow: 0 4px 8px blue;
+    width: 40%;
+    height: 9%;
+    z-index: 1;
+    
+}
+
+
+#dados-do-conduzido .nome-mae-suspeito{
+    display: inline-block;
+    position: absolute;
+    margin-top: 65%;
+    margin-left: 2.3%;
+    box-shadow: 0 4px 8px blue;
+    width: 85%;
+    height: 9%;
+    z-index: 1;
+    
+}
+
+#dados-do-conduzido .nome-mae{
+    display: inline-block;
+    position: absolute;
+    margin-top: 63.5%;
+    margin-left: 2.5%;
+    width: 40%;
+    height: 9%;
+    z-index: 1;
+    
+}
+
+#dados-do-conduzido h4{
+    display: inline-block;
+    position: absolute;
+    margin-top: 48%;
+    margin-left: 50.5%;
+    width: 40%;
+    height: 9%;
+    z-index: 1;
+    
+}
+
+#dados-do-conduzido h6{
+    display: inline-block;
+    position: absolute;
+    margin-top: 50%;
+    margin-left: 50.5%;
+    width: 40%;
+    height: 9%;
+    z-index: 1;
+    
+}
+
+
+
+/* -- Mensagens de sucesso/erro -- */
+.message {
+    padding: 10px;
+    margin-top: 50%;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: white; /* Cor do texto para as mensagens */
+    width: 100%; /* Ocupa a largura total para ser visível */
+    height: 5%;
+    position: absolute; /* Posiciona a mensagem no topo ou abaixo do formulário */
+    bottom: 0; /* Exemplo: posiciona na parte inferior do formulário */
+    left: 0;
+    z-index: 1; /* Para que não fique na frente do botão ou imagem */
+    
+}
+
+.message.success {
+    position: absolute;
+    background-color: green; /* Verde */
+    top: 18%;
+
+}
+
+.message.error {
+    background-color: #f44336; /* Vermelho */
+
+}
+
+img{
+    display: block;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: -3%;
+    width: 40%;
+    transform: scaleX(-1);
+}
+.nome {
+    display: block;
+    position: absolute;
+    margin-left: 5.2%;
+    margin-top: -1.5%;
+    color: black;
+}
+
+
+
+@media screen and (max-width:675px){
+    .link-registro a{
+        margin-left: 72%;
+        margin-top: 1%;
+  }
+
+    
+}
