@@ -13,7 +13,7 @@
 <body>
     <div class="estrelas"></div>
     <div class="formulario">
-        <h2>Cadastro Morador de Rua</h2>
+        <h2>Cadastro Situação de Rua</h2>
         <img src="assets/logo-policia.jpeg" class="img-top">
 
 
@@ -27,54 +27,56 @@
             </div>
 
             <div class="caixa-form-cad-nome">
-                <input type="text" id="nomeComp" placeholder="Nome Completo" name="nomeCompleto" required>
-                <i class='bx bxs-user'></i>
+                <input type="text" id="nomeComp" placeholder="Nome Completo" name="nomeCompleto" required>        
+            </div>
+
+            <div class="caixa-form-cad-entrada_psocial">
+                <input type="text" id="registropsocial" placeholder="Nome social:" name="registropsocial">
             </div>
 
             <div class="caixa-form-cad-vulgo">
                 <input type="text" id="vulgo" placeholder="vulgo" name="vulgo" required>
-                <i class='bx bxs-user-pin'></i>
             </div>
 
             <div class="caixa-form-cad-nome-mae">
                 <input type="text" id="nome_mae" placeholder="mae" name="nomeMae" required>
-                <i class='bx bxs-face'></i>
+                
             </div>
 
             <div class="caixa-form-cad-cpf">
                 <input type="text" id="cpf" name="cpf" placeholder="CPF" maxlength="11" required>
-                <i class='bx bxs-id-card'></i>
+                
             </div>
 
             <div class="caixa-form-cad-rg">
                 <input type="text" id="rg" placeholder="RG" name="rg" required>
-                <i class='bx bxs-id-card'></i>
+                
             </div>
 
             <div class="caixa-form-cad-endereco">
                 <input type="text" id="endereco" placeholder="endereço" name="endereco" required>
-                <i class='bx bxs-map'></i>
+                
             </div>
 
             <div class="caixa-form-cad-naturalidade">
                 <input type="text" id="naturalidade" placeholder="natural" name="naturalidade" required>
-                <i class='bx bxs-city'></i>
+                
             </div>
 
             <div class="caixa-form-cad-vicios">
                 <input type="text" id="vicios" placeholder="vicios" name="vicios" required>
-                <i class='bx bx-plus-medical'></i>
+                
             </div>
 
 
             <div class="caixa-form-cad-antecedentes">
                 <input type="text" id="antecedentes" placeholder="antecedentes:" name="antecedentes">
-                <i class='bx bx-file-find'></i>
+                
             </div>
 
             <div class="caixa-form-cad-informacao">
                 <textarea name="informacao" id="informacao" placeholder="Informações Adicionais:"></textarea>
-             <i class='bx bxs-info-circle'></i>
+           
             </div>
 
             <div>
@@ -82,7 +84,6 @@
                 <option value="entradacapsS" selected>Entrada Caps</option>
                 <option value="sim">sim</option>
                 <option value="nao">nao</option>
-                <i class='bx bxs-clinic'></i>
             </select>
         
             </div>
@@ -93,25 +94,23 @@
             </div>-->
 
 
-             <div id="pop" >
-             <select id="caps" name="registropop" required><!--aqui requered compara com server e banco de dados-->
+             <div>
+             <select id="pop" name="registropop" required><!--aqui requered compara com server e banco de dados-->
                 <option value="registropop" selected>Entrada pop</option>
                 <option value="sim">Sim</option>
                 <option value="nao">Não</option>
-                <i class='bx bxs-clinic'></i>
             </select>
             </div>
            
 
 
-              <div id="bolsa" >
-             <select id="caps" name="bolsafamilia" required><!--aqui requered compara com server e banco de dados-->
+              <div >
+             <select id="bolsa" name="bolsafamilia" required><!--aqui requered compara com server e banco de dados-->
                 <option value="beneficio" selected>Beneficio</option>
                 <option value="bolsa-familia">Bolsa Familia</option>
                 <option value="situção-rua">Bolsa Situação de Rua</option>
                 <option value="bpc">Bolsa BPC</option>
                  <option value="auxilio-brasil">Auxilio Brasil</option>
-                <i class='bx bxs-clinic'></i>
             </select>
             </div>
 
@@ -123,10 +122,7 @@
 
             
 
-            <div class="caixa-form-cad-entrada_psocial">
-                <input type="text" id="registropsocial" placeholder="Nome social:" name="registropsocial">
-                <i class='bx bxs-group'></i>
-            </div>
+            
 
             <!-- <div>
                 <img src="./assets/moradorderua2.png" alt="Morador de Rua"> </div>-->

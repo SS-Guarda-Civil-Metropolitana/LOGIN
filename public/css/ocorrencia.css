@@ -38,6 +38,7 @@ body {
   overflow: hidden; /* Garante que a imagem não "vaze" do container */
   position: absolute;
   cursor: pointer;
+  box-shadow: 0px 4px 8px 0px blue;
 }
 
 .foto-container img {
@@ -99,8 +100,8 @@ img{
 
  .formulario{
     width: 900%;
-    max-width: 98%;
-    height: 1400px;
+    max-width: 700%;
+    height: 2500px;
     position: static;
     background-color: white;
     border: 1px solid rgb(255, 255, 255, 0.2);;
@@ -203,19 +204,20 @@ img{
 button{
     display: inline-block;
     position: absolute;
-    margin-top: 89.2%;
+    margin-top: 75.2%;
     width: 35%;
     height: 30px;
     left: 54%;
     border-radius: 7px;
     border: none;
-    background-color: green;
+    background-color: blue;
     outline: none;/*remover linha ao redor*/
     cursor: pointer;
     color: black;
     font-weight: bold;
     font-size: 15px;
     font-weight: 600;/*coloca um tom mais forte na cor*/
+    z-index: 1;
     
 }
 
@@ -223,21 +225,13 @@ button:hover{
     background-color: yellow
 }
 
-.butao-voltar{
-    display: inline-block;
-    position: absolute;
-    margin-left: -45%;
-    background-color: red;
-
-}
-
 .but-voltar{
     color: black;
-    background-color: red;
-    position: absolute;
+    background-color: blue;
     display: inline-block;
-    margin-top: 40%;
+    margin-top: 75%;
     margin-left: -45%;
+    z-index: 1;
 }
 
 .link-registro p{
@@ -306,7 +300,7 @@ button:hover{
     margin-top: 15%;
     margin-left: -0.3%;
     width: 90%;
-    height: 150%;
+    height: 350%;
     z-index: 1;
 }
 
@@ -339,7 +333,7 @@ button:hover{
     box-shadow: 0 4px 8px blue;
     margin-top: 8%;
     width: 95%;
-    height: 5%;
+    height: 2.2%;
 
 }
 #ocorrencia .selecionar{
@@ -348,7 +342,7 @@ button:hover{
     margin-top: 12.5%;
     margin-left: -51.6%;
     width: 45%;
-    height: 5%;
+    height: 3%;
     background-color: blue;
    
 }
@@ -364,7 +358,7 @@ button:hover{
      margin-top: 12.5%;
     margin-left: -1.3%;
     width: 45%;
-    height: 5%;
+    height: 3%;
     background-color: blue;
    
 }

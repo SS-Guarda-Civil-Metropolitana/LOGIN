@@ -22,27 +22,34 @@
     <h1>Login Policia Municipal</h1>
     
         <form id="loginForm">
-            
-            <select id="tipoAcesso" name="tipoAcesso" class="form-select-custom">
-                <label for="nivel">Nivel de Acesso</label>
+            <label class="label" for="nivel">Nivel de Acesso</label>
+            <select id="tipoAcesso" name="tipoAcesso" class="form-select-custom">    
                 <option value="Operacional" selected>Operacional</option>
                 <option value="Tatico">Tatico</option>
                 <option value="Estrategico">Estrategico</option>
             </select>
 
                 <div class="input">
-              <input type="text" id= "identificador" name="nomeGuerra" placeholder="nome de guerra" required>
-                <i class='bx bxs-user'></i><!--a função bx bxs, adciona visualizar o incone na tela do usuario, ja atributo USER é o icone a ser visto, nesse caso UM USUARIO-->
-
-                <input type="password" id="senha" name="senha" placeholder="Digite sua Senha" required>
-                <i class='bx bxs-lock-alt'></i><!--a função bx bxs, adciona visualizar o incone na tela do usuario, ja atributo LOCK-ALT é o icone a ser visto, nesse caso um cadeado-->
+              
+                <input type="text" id= "identificador" name="nomeGuerra" required>
+                <!--a função bx bxs, adciona visualizar o incone na tela do usuario, ja atributo USER é o icone a ser visto, nesse caso UM USUARIO-->
+               
+                
+                <input type="password" id="senha" name="senha" required>
+               <!--a função bx bxs, adciona visualizar o incone na tela do usuario, ja atributo LOCK-ALT é o icone a ser visto, nesse caso um cadeado-->
+                
                 </div>
-
+                 <div class="div1user">
+                    <i class='bx bxs-user'></i>
+                 </div>
+                <div class="div2cadeado">
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
             
                 
                 <a href="redefinicao.html">Esqueceu sua senha? Clique aqui!</a>
 
-                <div id="bot-volta">
+                <div id="bot-voltar">
                     <a href="cadUsuario.html" id="Cadastrar" class="cadastrar">Cadastre-se</a>
                 </div>
                 <button type="submit" id="entra"  class="entrar">Entrar</button>

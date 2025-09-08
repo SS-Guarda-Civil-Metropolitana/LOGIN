@@ -26,7 +26,7 @@ body {
 
 .foto-container {
   width: 180px; /* Largura aproximada de uma foto 3x4, ajuste conforme necessário */
-  height: 210px; /* Altura aproximada de uma foto 3x4, ajuste conforme necessário */
+  height: 190px; /* Altura aproximada de uma foto 3x4, ajuste conforme necessário */
   border: 5px dashed  rgba(13, 172, 97, 0.1);
   border-radius: 5px;
   margin-left: 64%;
@@ -38,6 +38,7 @@ body {
   overflow: hidden; /* Garante que a imagem não "vaze" do container */
   position: absolute;
   cursor: pointer;
+  box-shadow: 0 4px 8px blue;
 }
 
 .foto-container img {
@@ -103,10 +104,10 @@ img{
 }
 
 
- .formulario{
+ .formulario{/*teforme esta ajustado na dimesao de tela de tv de 40' polegadas*/
     width: 900%;
     max-width: 98%;
-    height: 800px;
+    height: 1200px;
     position: static;
     background-color: white;
     border: 1px solid rgb(255, 255, 255, 0.2);;
@@ -125,8 +126,8 @@ img{
     display: inline-block;
     font-size: 25px;
     font-weight: 600;
-    margin-left: 4%;
-    margin-top: 2.3%;
+    margin-left: 7%;
+    margin-top: 2.0%;
     text-align: center;
     color: black;
  }
@@ -189,44 +190,26 @@ textarea {
 #nomeComp{
     position: absolute;
     display: inline-block;
-    width: 105%;
+    width: 65%;
     color: black;
-    margin-left: -35%;
+    margin-top: 8%;
+    margin-left: 3%;
+    box-shadow: 0 4px 8px blue;
 }
-.bxs-user{
-   position: absolute;
-   display: inline-block;
-   margin-left: -38%;
-   width: 20%;
-   color: blue ;
-   margin-top: 1.5%;
 
-}
 
 #vicios{
     position: absolute;
     display: inline-block;
     width: 20%;
-    margin-top: 5.5%;
+    margin-top: 32%;
+    margin-left: 33.5%;
     color: black;
+    box-shadow: 0 4px 8px blue;
 }
 
-.bx-plus-medical{
-    position: absolute;
-    display: inline-block;
-    margin-top: 7%;
-    margin-left: 3%;
-    color: blue;
-}
 
-#bolsafamilia{
-    position: absolute;
-    display: inline-block;
-    width: 30%;
-    margin-top: 9%;
-    margin-left: 30%;
 
-}
 
 .bxs-wallet{
      position: absolute;
@@ -263,14 +246,6 @@ textarea {
     color: blue;
 }
 
-#entradacaps{
-  position: absolute;
-    display: block;
-    margin-top: -11%;
-    width: 30%;
-    margin-left: 30%;
-    
-}
 
 #informacao{  
     display: inline-block;
@@ -313,14 +288,7 @@ textarea {
 }
 
 
-#registropop{
-    position: absolute;
-    display: inline-block;
-    margin-left: -5%;
-    width: 30%;
-    margin-top: -5%;
 
-}
 
 .bxs-building-house{
     position: absolute;
@@ -330,10 +298,7 @@ textarea {
     color: blue;
 }
 
-#endereco{
-    width: 89%;
-    margin-top: 8%;
-}
+
 
 .bxs-map{
     display: inline-block;
@@ -356,21 +321,30 @@ textarea {
 #nome_mae{
     display: block;
     position: absolute;
-    width: 89%;
+    width: 65%;
+    box-shadow: 0 4px 8px blue;
+    margin-left: 3%;
+    margin-top: 20%;
    
 }
 
 #antecedentes{
+    display: inline-block;
     position: absolute;
-    margin-top: 36.5%;
+    margin-top: 32%;
     width: 30%;
-    left: -10%;
+    margin-left: 3%;
+    box-shadow: 0 4px 8px blue;
+    
 }
 
 #vulgo{
    position: absolute;
     display: inline-block;
     width: 30%;
+    box-shadow: 0 4px 8px blue;
+    margin-top: 14%;
+    margin-left: 38%;
 
 }
 
@@ -378,9 +352,10 @@ textarea {
 #registropsocial{
      position: absolute;
     display: inline-block;
-    width: 30%;
+    width: 38%;
     margin-top: 1%;
     margin-left: -5%;
+    box-shadow: 0 4px 8px blue;
 }
 
 .caixa-lembrar{
@@ -446,6 +421,7 @@ select{
     margin-top: 28%;
     border-radius:  3%;
     box-shadow: blue;
+    
    
 }
 
@@ -480,13 +456,13 @@ label{
 button{
     display: inline-block;
     position: absolute;
-    margin-top: 50%;
-    width: 35%;
-    height: 30px;
-    left: 54%;
+    margin-top: 52.5%;
+    width: 14%;
+    height: 40px;
+    left: 74%;
     border-radius: 7px;
     border: none;
-    background-color: green;
+    background-color: blue;
     outline: none;/*remover linha ao redor*/
     cursor: pointer;
     color: black;
@@ -497,24 +473,20 @@ button{
 }
 
 button:hover{
-    background-color: yellow
+    background-color: rgb(9, 9, 129);
 }
 
-.butao-voltar{
-    display: inline-block;
-    position: absolute;
-    margin-left: -45%;
-    background-color: red;
 
-}
 
 .but-voltar{
     color: black;
-    background-color: red;
+    font-weight: bold;
+    background-color: rgb(13, 13, 226);
     position: absolute;
     display: inline-block;
     margin-top: 23%;
-    margin-left: -45%;
+    margin-left: -16%;
+    width: 14%;
 }
 
 
@@ -563,92 +535,76 @@ label{
     width: 90%;
 }
 
-.caixa-form-cad-entrada_caps{
-      display: block;
+
+#pop{
+   display: block;
     position: absolute;
-    margin-left: 30%;
-    margin-top: -20%;
-    width: 90%;
+    margin-left:28.5%;
+    margin-top: 32%;
+    width: 24%;
+    box-shadow: 0 4px 8px blue;
+
+}
+
+#caps{
+    display: block;
+    position: absolute;
+    margin-left: 54%;
+    margin-top: 32%;
+    width: 30%;
+    box-shadow: 0 4px 8px blue;
+}
+
+#bolsa{
+    display: block;
+    position: absolute;
+    margin-left: 3.3%;
+    margin-top: 32%;
+    width: 24%;
+    box-shadow: 0 4px 8px blue; 
 }
 
 
 
-.caixa-form-cad-antecedentes{
+
+
+
+#cpf{
      display: block;
     position: absolute;
-    margin-left: 30%;
-    margin-top: -10%;
-    width: 90%;
-}
-
-.caixa-form-cad-vicios{
-     display: block;
-    position: absolute;
-    margin-left: 30%;
-    margin-top: -5%;
-    width: 90%;
-}
-.caixa-form-cad-bolsa_familia{
-    display: block;
-    position: absolute;
-    margin-left: 30%;
-    margin-top: -24%;
-    width: 90%; 
-}
-
-.caixa-form-cad-nome{
-    display: block;
-    position: absolute;
-    margin-left: 25.5%;
-    margin-top: 8%;
-    width: 62%;
-}
-.caixa-form-cad-vulgo{
-    display: block;
-    position: absolute;
-    margin-left: -0.5%;
-    margin-top: 14%;
-    width: 90%;
-}
-
-.caixa-form-cad-nome-mae{
-    display: block;
-    position: absolute;
-    margin-left: -0.5%;
-    margin-top: 20%;
-    width: 74%;
-}
-
-.caixa-form-cad-cpf{
-     display: block;
-    position: absolute;
-    margin-left: -0.5%;
+    margin-left: 3%;
     margin-top: 26%;
-    width: 90%;
+    width: 30%;
+    box-shadow: 0 4px 8px blue;
 }
 
-.caixa-form-cad-rg{
+#rg{
        display: block;
     position: absolute;
-    margin-left: -0.5%;
-    margin-top: 32%;
-    width: 90%;  
+    margin-left: 33.5%;
+    margin-top: 26%;
+    width: 20%; 
+    box-shadow: 0 4px 8px blue; 
 }
 
-.caixa-form-cad-endereco{
-    display: block;
+#endereco{
+    display: inline-block;
     position: absolute;
-    margin-left: -0.5%;
-    margin-top: 30%;
-    width: 90%; 
+    width: 49.5%;
+    margin-top: 39%;
+    margin-left: 2.9%;
+    box-shadow: 0 4px 8px blue;
 }
 
-.caixa-form-cad-naturalidade{
+
+
+#naturalidade{
     display: block;
     position: absolute;
-    margin-left: -0.5%;
-    margin-top: 43%;
-    width: 90%; 
+    margin-left:54%;
+    margin-top: 39%;
+    width: 30%; 
+    box-shadow: 0 4px 8px blue;
 }
 
 .caixa-form-cad-bolsa_familia{
@@ -670,8 +626,8 @@ label{
 .caixa-form-cad-entrada_psocial{
     display: block;
     position: absolute;
-    margin-left: 30%;
-    margin-top: 25%;
+    margin-left: 7.5%;
+    margin-top: 13%;
     width: 90%; 
 }
 
@@ -683,29 +639,18 @@ label{
     width: 90%; 
 }
 
-.caixa-form-cad-informacao{
+#informacao{
    display: block;
     position: absolute;
-    margin-left: 30%;
-    margin-top: 15%;
-    width: 90%;  
+    margin-left: 54%;
+    margin-top: 25.5%;
+    width: 30%; 
+    height: 25%; 
+    box-shadow: 0 4px 8px blue;
 }
 
-.caixa-form-cad-antecedentes{
-    display: block;
-    position: absolute;
-    margin-left: 30%;
-    margin-top: 10%;
-    width: 90%; 
-}
 
-.caixa-form-cad-vicios{
-    display: block;
-    position: absolute;
-    margin-left: 30%;
-    margin-top: 9%;
-    width: 90%; 
-}
+
 
 
 /* -- Mensagens de sucesso/erro -- */
@@ -754,11 +699,42 @@ img{
 
 
 
-@media screen and (max-width:675px){
-    .link-registro a{
-        margin-left: 72%;
-        margin-top: 1%;
-  }
+ 
 
+
+
+
+@media screen and (max-width: 1500px){/* demisao ajustada para tela de notebook 15' polegadas*/
     
+   .formulario{
+    width: 900%;
+    max-width: 98%;
+    height: 800px;
+    position: static;
+    background-color: white;
+    border: 1px solid rgb(255, 255, 255, 0.2);;
+    backdrop-filter: blue 40px;
+    backdrop-filter: 10px;/*diar a cor pouco mais clarinha de efeito*/
+    box-shadow: 0 15px 32px rgba(0, 0, 0, 0.842);
+    border-radius: 16px;
+    padding: 35px;
+  
+
+
+  }
+  .but-voltar{
+    margin-top: 25.5%;
+    margin-left: -15.8%;
+    width: 14%;
 }
+
+button{
+    margin-top: 52.5%;
+    width: 14%;
+    height: 40px;
+    left: 75.5%;
+}
+
+}
+
+

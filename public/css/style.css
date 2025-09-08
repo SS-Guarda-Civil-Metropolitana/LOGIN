@@ -52,7 +52,7 @@ body {
 .formulario {
     position: absolute;
     display: inline-block;
-    width: 700px;
+    width: 900px;
     height: 80%;
     margin-top: 1%;
     margin-right: 25%;
@@ -69,17 +69,16 @@ body {
 }
 
 /*AQUI BOTAO CADASTRAR*/
-.cadastrar {
+#bot-voltar .cadastrar {/*botao cadastrar*/
     display: inline-block; /* Para que possa ter largura e altura */
     position: absolute;
     text-align: center;
     padding: 10px 20px;
-    background-color: red; /* Exemplo de cor para a tag 'a' */
-    left: -33%;
-    top: 14%;
-    color: white;
+    background-color: blue; /* Exemplo de cor para a tag 'a' */
+    margin-left: 8%;
+    margin-top: 45.5%;
     width: 39%;
-   height: 5.7%;
+   height: 5%;
    border: none;
    outline: none;
      border-radius: 7px;
@@ -95,7 +94,7 @@ body {
 }
 
 .cadastrar:hover {
-    background-color: yellow;
+    background-color: rgb(6, 6, 104);
 }
 
 
@@ -107,11 +106,11 @@ body {
     position: absolute;
     margin-top: 45%;
     width: 39%;
-    height: 30px;
+    height: 39px;
     left: 53%;
     border-radius: 7px;
     border: none;
-    background-color:  green;
+    background-color:  blue;
     outline: none;
     /*remover linha ao redor*/
     cursor: pointer;
@@ -125,7 +124,7 @@ body {
 
 
 .formulario button:hover {
-    background-color: yellow;
+    background-color: rgb(6, 6, 104);
 }
 
 
@@ -133,7 +132,7 @@ body {
     font-size: 25px;
    
     font-weight: 600;
-    margin-left: 22%;
+    margin-left: 25%;
     margin-top: 10%;
     color: black;
     text-align: center;
@@ -146,6 +145,7 @@ h1{
     display: block;
     position: absolute;
     margin-top: 100%;
+    margin-left: 5%;
 
 }
 
@@ -153,12 +153,15 @@ option{
     display: inline;
     position: absolute;
     margin-left: -6%;
+    cursor: pointer;
 }
+
 
 
 select{
     position: absolute;
-    background-color:  rgba(73, 128, 139, 0.849);;
+    background-color:  rgba(232, 245, 252, 0.849);
+    box-shadow: 0 4px 8px blue;
     color: black;
     margin-left: 7%;
     font-weight: bold;
@@ -167,6 +170,8 @@ select{
     margin-top: 17%;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    
 }
 
 
@@ -174,7 +179,7 @@ select{
 .formulario a {
     position: absolute;
     display: block;
-    margin-left: 46%;
+    margin-left: 49%;
     margin-top: 40%;
     color: black;
     font-weight: bold;
@@ -207,14 +212,16 @@ select{
     display: block;
     position: relative;
     margin-bottom: 20px;
-    width: 90%;
-    right: 20%;
+    width: 85%;
+    right: 15%;
     height: 45px;
     border: none;
     border-radius: 10px;
     outline: none;
     color: black;
-    background-color: rgba(73, 128, 139, 0.849);
+    background-color:  rgba(232, 245, 252, 0.849);
+    box-shadow: 0 4px 8px blue;
+    border-radius: 0px 10px 10px 0px;
     font-size: 16px;
     padding: 0 20px;
 }
@@ -292,19 +299,38 @@ select{
 .bxs-user {
     display: inline-block;
     position: absolute;
-    margin-top: -8%;
-    margin-left: -23%;
     color: black;
+    font-size: 150%;
+    margin-top: 25%;
+    margin-left: 20%;
 }
 
 .bxs-lock-alt {
     display: inline-block;
     position: absolute;
-    margin-top: -8%;
-    margin-left: -23%;
     color: black;
+    font-size: 150%;
+    margin-top: 25%;
+    margin-left: 20%;
 }
 
+
+
+
+
+
+
+
+/*
+.bxs-lock-alt {
+    display: inline-block;
+    position: absolute;
+    margin-top: -8%;
+    margin-left: -25%;
+    font-size: 150%;
+    color: black;
+}
+*/
 
 
 .link-registro p {
@@ -337,13 +363,13 @@ select{
 
 }
 
-label{
+.label{
+    display: block;
     position: absolute;
-    font-size: 20px;
+    font-size: 15px;
     color: black;
-    font-weight: bold;
-    margin-top: -6%;
-    margin-left: 25%;
+    top: 20.2%;
+    left: 11%;
 }
 
 
@@ -353,13 +379,16 @@ option{
 }
 
 
+
+
 .formulario .logo-pm {
     display: block;
-    width: 15%; /* Largura da logo */
-    max-width: 50%; /* Garante que não exceda 90% da largura do contêiner */
+    position: absolute;
+    width: 14%; /* Largura da logo */
+    /* Garante que não exceda 90% da largura do contêiner */
     height: auto; /* Mantém a proporção */
     margin: 20px auto; /* Centraliza a logo horizontalmente dentro de sua coluna */
-    margin-top: -5%;
+    margin-top: -3.5%;
     opacity: 1; /* Removido a transparência para melhor visibilidade */
     margin-left: 35%;
     box-shadow: 0px 0px 0px 0px #ffff;
@@ -373,8 +402,8 @@ img{
     position: absolute;
     width: 30%;
     height: 100.5%;
-    margin-left: -35%;
-    margin-top: -5.3%;
+    margin-left: -34.2%;
+    margin-top: -4.1%;
     opacity: 80%;
     border-radius: 20px 0 0 20px;
     border: 2px solid black;
@@ -387,8 +416,8 @@ img{
     position: absolute;
     width: 30%;
     height: 100.5%;
-    margin-left: 95.3%;
-    margin-top: -5.3%;
+    margin-left: 96.5%;
+    margin-top: -4.1%;
     opacity: 80%;
     border-radius: 0 20px 20px 0;
     border: 2px solid black;
@@ -525,172 +554,185 @@ img{
 
 
 
+@media screen and (max-width: 1500px){/* demisao ajustada para tela de notebook 15' polegadas*/
+    
+   .formulario{
+   position: absolute;
+    display: inline-block;
+    width: 700px;
+    height: 80%;
+    margin-top: 1%;
+    margin-right: 25%;
+    background-color: white;
+    border: 2px solid black;
+    backdrop-filter: blue 40px;
+    backdrop-filter: 10px;
+    /*diar a cor pouco mais clarinha de efeito*/
+    box-shadow: 2px 2px 10px 1px  black;
+    border-radius: 0 0 0 0;
+    padding: 35px;
+  
 
 
-
-/*
-@media screen and (max-width:507px) {
-    .link-registro a {
-        display: inline-block;
-        position: absolute;
-        left: 9%;
-        top: 61.5%;
-        text-decoration: none;
-
-
-    }
-
-    .formulario .chekbox {
-        position: absolute;
-        display: inline-block;
-        bottom: 42.2%;
-        left: 9.3%;
-        width: 10px;
-        height: 10px;
-    }
-
+  }
+img{
+    display: inline-block;
+    position: absolute;
+    width: 30%;
+    height: 100.5%;
+    margin-left: -35%;
+    margin-top: -5.3%;
+    opacity: 80%;
+    border-radius: 20px 0 0 20px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 10px 1px  black;
+}
+.pre{
+    display: inline-block;
+    position: absolute;
+    width: 30%;
+    height: 100.5%;
+    margin-left: 95.3%;
+    margin-top: -5.3%;
+    opacity: 80%;
+    border-radius: 0 20px 20px 0;
+    border: 2px solid black;
+     box-shadow: 2px 2px 10px 1px  black;
+}
+    .formulario h1 {
+    font-size: 25px;
+   
+    font-weight: 600;
+    margin-left: 22%;
+    margin-top: 10%;
+    color: black;
+    text-align: center;
+    font-weight: bold;
 }
 
-@media screen and (max-width:330px) {
-    .link-registro a {
-        display: inline-block;
-        position: absolute;
-        left: 9%;
-        top: 61.5%;
-        text-decoration: none;
-
-
-    }
-
-    .formulario .chekbox {
-        position: absolute;
-        display: inline-block;
-        bottom: 42.2%;
-        left: 9.3%;
-        width: 10px;
-        height: 10px;
-    }
-
-    @media screen and (min-width:430px) {
-        .formulario {
-            width: 300px;
-            height: 40%;
-
-
-        }
-
-
-        .link-registro a {
-            display: inline-block;
-            position: absolute;
-            left: 9%;
-            top: 61.5%;
-            text-decoration: none;
-
-
-        }
-
-        .formulario .chekbox {
-            bottom: 28.7%;
-            left: 12%;
-
-
-
-        }
-
-        .link-registro a {
-            top: 20;
-
-
-
-        }
-
-        .bxs-user {
-            left: 13%;
-            top: 42%;
-
-        }
-
-        .bxs-lock-alt {
-            left: 13%;
-            top: 58%;
-
-        }
-
-        .link-registro a {
-            left: 20%;
-            top: 80.9%;
-
-
-
-        }
-
-        .formulario a {
-            margin-top: -1%;
-        }
-
-
-    }
+.formulario button {
+    display: inline-block;
+    position: absolute;
+    margin-top: 45%;
+    width: 39%;
+    height: 35px;
+    left: 53%;
+    border-radius: 7px;
+    border: none;
+    background-color:  blue;
+    outline: none;
+    /*remover linha ao redor*/
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    font-weight: 600;
+    /*coloca um tom mais forte na cor*/
 }
 
 
-@media screen and (min-width:468px) {
-    .formulario {
-        width: 300px;
-        height: 40%;
+
+#bot-voltar .cadastrar {/*botao cadastrar*/
+    position: absolute;
+    display: inline-block;
+    margin-left: 8%;
+    margin-top: 45%;
+    width: 39%;
+   height: 35px;
+    
+}
+
+.formulario .logo-pm {
+  margin-top: -3.4%;
+   
+}
+
+.label{
+    display: block;
+    position: absolute;
+    font-size: 15px;
+    color: black;
+    margin-top: 4.7%;
+    left: 12%;
+}
 
 
-    }
+.formulario a {
+    position: absolute;
+    display: block;
+    margin-left: 46%;
+    margin-top: 40%;
+    color: black;
+    font-weight: bold;
 
+}
 
-    .link-registro a {
-        display: inline-block;
-        position: absolute;
-        left: 9%;
-        top: 61.5%;
-        text-decoration: none;
+.formulario input {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    width: 83.5%;
+    right: 14.3%;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: black;
+    background-color:  rgba(232, 245, 252, 0.849);
+    box-shadow: 0 4px 8px blue;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 16px;
+    padding: 0 20px;
+}
 
+.bxs-user {
+    display: inline-block;
+    position: absolute;
+    color: black;
+    font-size: 150%;
+    margin-top: 25%;
+    margin-left: 20%;
+}
 
-    }
+.bxs-lock-alt {
+    display: inline-block;
+    position: absolute;
+    color: black;
+    font-size: 150%;
+    margin-top: 25%;
+    margin-left: 20%;
+}
 
-    .formulario .chekbox {
-        bottom: 28.7%;
-        left: 12%;
+.div1user{
+display: inline-block;
+  position: absolute;
+  background-color:  rgba(232, 245, 252, 0.849);
+  width: 5%;
+  height: 8.8%;
+  margin-left: 7.3%;
+  margin-top: 23.1%;
+  box-shadow: 0 4px 8px blue;
+   border-radius: 10px 0px 0px 10px;
+  border: solid rgba(232, 245, 252, 0.849);;
+  border-left: rgba(232, 245, 252, 0.849);;
+  border-top: black;
 
+}
 
-
-    }
-
-    .link-registro a {
-        top: 20;
-
-
-
-    }
-
-    .bxs-user {
-        left: 13%;
-        top: 42%;
-
-    }
-
-    .bxs-lock-alt {
-        left: 13%;
-        top: 58%;
-
-    }
-
-    .link-registro a {
-        left: 20%;
-        top: 80.9%;
-
-
-
-    }
-
-    .formulario a {
-        margin-top: -1%;
-    }
-
+.div2cadeado{
+display: inline-block;
+  position: absolute;
+  background-color:  rgba(232, 245, 252, 0.849);
+  width: 5%;
+  height: 8.8%;
+  margin-left: 7.2%;
+  margin-top: 32.4%;
+  box-shadow: 0 4px 8px blue;
+   border-radius: 10px 0px 0px 10px;
+ border: solid rgba(232, 245, 252, 0.849);
+  border-left: rgba(232, 245, 252, 0.849);
+  border-top: black;
+  
+}
 
 }
