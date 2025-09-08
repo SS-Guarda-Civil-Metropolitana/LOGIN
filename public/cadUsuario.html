@@ -116,10 +116,12 @@ document.addEventListener('DOMContentLoaded', function() {
             return; // Impede o envio se a validação falhar
         }
 
-        console.log('3. Tentando enviar fetch para:', 'http://localhost:3001/cadastrar');
+        /*console.log('3. Tentando enviar fetch para:', 'http://localhost:3001/cadastrar');*/
+        console.log('3. Tentando enviar fetch para:', 'https://login-production-0c35.up.railway.app/cadastrar');
 
         try {
-            const response = await fetch('http://localhost:3001/cadastrar', {
+           /* const response = await fetch('http://localhost:3001/cadastrar', {*/
+                  const response = await fetch('https://login-production-0c35.up.railway.app/cadastrar', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

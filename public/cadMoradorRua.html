@@ -192,7 +192,9 @@
             messageDiv.classList.remove('success', 'error');
             messageDiv.textContent = '';
 
-           fetch('http://localhost:3001/api/moradores', {
+           /*fetch('http://localhost:3001/api/moradores', {*/
+           const BASE_URL = 'https://login-production-0c35.up.railway.app';
+            fetch(`${BASE_URL}/api/moradores`, {
             method: 'POST',
             body: formData, // Envie o FormData diretamente
     // Remova o headers, o navegador irá definir o Content-Type: multipart/form-data

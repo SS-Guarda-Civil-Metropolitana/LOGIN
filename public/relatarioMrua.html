@@ -99,7 +99,7 @@
                     queryParams.append(dbColumn, searchTerm);
                     const queryString = queryParams.toString();
                     
-                    const response = await fetch(`http://localhost:3001/api/moradores/busca?${queryString}`, {
+                    const response = await fetch(`http://login-production-0c35.up.railway.app/moradores/busca?${queryString}`, {
                         method: 'GET',
                         headers: {
                             'Content-Type': 'application/json',
@@ -173,7 +173,7 @@
             reportWindow.document.write('<p>Carregando relatório...</p>');
 
             try {
-                const response = await fetch(`http://localhost:3001/api/moradores/${userId}`, {
+                const response = await fetch(`http://login-production-0c35.up.railway.app/moradores/${userId}`, {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
                 const data = await response.json();
