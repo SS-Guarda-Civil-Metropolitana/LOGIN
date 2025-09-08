@@ -87,6 +87,8 @@ const dbConfig = {
   database: process.env.MYSQL_DATABASE
 };
 
+const connection = mysql.createConnection(dbConfig);
+
 
 // Rota para cadastrar usuários do sistema
 app.post('/cadastrar', async (req, res) => {
