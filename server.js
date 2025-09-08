@@ -71,13 +71,22 @@ const authorizeRoles = (allowedRoles) => {
 };
 
 
-
+/* AQUI É CONEXAO COM BANCO DE DADOS NO SERVIDOR LOCAL XAMPP MYSQL//
 const dbConfig = {
     host: process.env.DB_HOST || 'localhost',
     user: process.env.DB_USER || 'root',
     password: process.env.DB_PASSWORD || '',
     database: process.env.DB_NAME || 'policia_municipal'
 };
+*/
+
+const dbConfig = {
+  host: process.env.MYSQL_HOST,
+  user: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASSWORD,
+  database: process.env.MYSQL_DATABASE
+};
+
 
 // Rota para cadastrar usuários do sistema
 app.post('/cadastrar', async (req, res) => {
