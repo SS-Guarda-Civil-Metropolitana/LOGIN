@@ -12,7 +12,7 @@ const port = process.env.PORT || 3001;
 
 
 app.use(cors({
-  origin: 'https://login-xi-smoky.vercel.app' // Substitua pela sua URL Vercel
+  origin: 'https://login-xi-smoky.vercel.app/' // Substitua pela sua URL Vercel
 }));
 
 const storage = multer.diskStorage({
