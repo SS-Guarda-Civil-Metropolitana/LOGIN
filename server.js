@@ -5,9 +5,15 @@ const cors = require('cors'); // Para permitir requisições de origens diferent
 require('dotenv').config(); // Carrega variáveis de ambiente do arquivo .env
 const multer = require('multer');
 const path = require('path');
+const cors = require('cors');
 const jwt = require('jsonwebtoken'); // <--- IMPORTAÇÃO NECESSÁRIA PARA JWT
 const app = express();
 const port = process.env.PORT || 3001;
+
+
+app.use(cors({
+  origin: 'https://login-xi-smoky.vercel.app' // Substitua pela sua URL Vercel
+}));
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
