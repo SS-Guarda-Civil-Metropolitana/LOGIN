@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ocorrencia.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/stylerelatorio.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <title>Relatorio-morador-em-Situação-de-Rua - Polícia Municipal</title>
+</head>
+
+<body>
+    <div class="formulario">
+        <h2>Relatorio morador Situação de Rua</h2>
+        <img src="assets/brasao.jpg" class="img-top">
+          <div>
+    <a href="index.html"><button class="butao">INICIO</button></a>
+</div>
+        <div class="container">
+            <h1>Buscar Marador</h1>
+            <form id="search-form">
+                <input type="text" id="morador">
+                <label for="busca">Tipo de busca:</label>
+                <select id="tipoBuscas" name="tipoBusca" class="form-select-custom">
+                    <option value="name" selected>Nome</option>
+                    <option value="cpf">CPF</option>
+                    <option value="rg">RG</option>
+                </select>
+                <button type="submit">Buscar</button>
+            </form>
+            <div></div>
+        </div>
+
+        <div class="tabela">
+            <h2>Relatorios</h2>
+            <div class="tabela-headers">
+                <ul>
+                    <li>Nome</li>
+                    <li>CPF</li>
+                    <li>Mae</li>
+                    <li>Vulgo</li>
+                    <li>Informação</li>
+                    <li>antecedentes</li>
+                    <li>entradapop</li>
+                     <li>entradacaps</li>
+                      <li>registropsocial</li>
+                    <li>naturalidade</li>
+                    <li>endereco</li>
+                    <li>bolsa familia</li>
+                    <li>imagen</li>
+                </ul>
+            </div>
+            
+            <div id="results" class="tabela-conteudo">
+            </div>
+            
+        </div>
+    </div>
+  
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Captura de elementos
+        const searchForm = document.getElementById('search-form');
+        const searchInput = document.getElementById('morador');
+        const searchBySelect = document.getElementById('tipoBuscas');
+        const resultsContainer = document.getElementById('results');
+
+        const filterMap = {
+            'name': 'nomeCompleto',
+            'cpf': 'cpf',
+            'rg': 'rg'
+        };
+
+        if (searchForm && searchInput && searchBySelect && resultsContainer) {
+            searchForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const searchTerm = searchInput.value.trim();
+                const searchBy = searchBySelect.value;
+                const dbColumn = filterMap[searchBy];
+
+                if (!searchTerm) {
+                    alert('Por favor, digite um valor para a busca.');
+                    return;
+                }
+
+                resultsContainer.innerHTML = '<div style="text-align: center; padding: 20px;">Buscando...</div>';
+                const token = localStorage.getItem('jwtToken');
+                if (!token) {
+                    resultsContainer.innerHTML = '<div style="text-align: center; padding: 20px; color: red;">Você não está autenticado. Faça login novamente.</div>';
+                    return;
+                }
+
+                try {
+                    const queryParams = new URLSearchParams();
+                    queryParams.append(dbColumn, searchTerm);
+                    const queryString = queryParams.toString();
+                    
+                    const response = await fetch(`http://login-production-0c35.up.railway.app/moradores/busca?${queryString}`, {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${token}`
+                        }
+                    });
+
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        resultsContainer.innerHTML = `<div style="text-align: center; padding: 20px; color: red;">Erro: ${errorData.message}</div>`;
+                        return;
+                    }
+                    
+                    const data = await response.json();
+                    resultsContainer.innerHTML = '';
+                    
+                    if (data.success && data.moradores.length > 0) {
+                        data.moradores.forEach(user => {
+                            const row = document.createElement('div');
+                            row.className = 'linha-dados';
+                            row.dataset.id = user.id;
+
+                            const dataFields = ['nomeCompleto', 'cpf', 'rg', 'nome_mae', 'vulgo', 'naturalidade', 'informacao', 'antecedentes', 'registropop', 
+                            'endereco', 'registropsocial', 'bolsafamilia', 'entradacaps','imagen'];
+
+                            dataFields.forEach(field => {
+                                const cell = document.createElement('div');
+                                cell.className = 'celula-dados';
+                                if (field === 'imagen' && user[field]) {
+                                    const img = document.createElement('img');
+                                    img.src = `http://localhost:3001/uploads/${user[field]}`;
+                                    img.alt = 'Foto do morador';
+                                    img.style.width = '50px';
+                                    cell.appendChild(img);
+                                } else {
+                                    cell.textContent = user[field] || 'N/A';
+                                }
+                                row.appendChild(cell);
+                            });
+                            
+                            row.addEventListener('click', () => {
+                                viewReport(user.id); // Chama a nova função
+                            });
+
+                            resultsContainer.appendChild(row);
+                        });
+                    } else {
+                        resultsContainer.innerHTML = '<div style="text-align: center; padding: 20px;">Nenhum morador encontrado.</div>';
+                    }
+                } catch (error) {
+                    console.error('Erro na busca:', error);
+                    resultsContainer.innerHTML = '<div style="text-align: center; padding: 20px; color: red;">Ocorreu um erro na busca.</div>';
+                }
+            });
+        }
+
+        // NOVO CÓDIGO: Função para abrir o relatório em uma nova janela
+        async function viewReport(userId) {
+            const token = localStorage.getItem('jwtToken');
+            if (!token) {
+                alert('Erro: Token de autenticação não encontrado.');
+                return;
+            }
+
+            const reportWindow = window.open('', '_blank');
+            if (!reportWindow) {
+                alert('O navegador bloqueou a abertura da nova janela. Por favor, permita pop-ups para este site.');
+                return;
+            }
+
+            reportWindow.document.write('<p>Carregando relatório...</p>');
+
+            try {
+                const response = await fetch(`http://login-production-0c35.up.railway.app/moradores/${userId}`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                const data = await response.json();
+
+                if (response.ok && data.success) {
+                    const morador = data.morador;
+                    
+                    const reportHtml = `
+                        <!DOCTYPE html>
+                        <html lang="pt-br">
+                        <head>
+                            <title>Relatório de ${morador.nomeCompleto}</title>
+                            <link rel="stylesheet" href="./css/stylerelatorio.css">
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></` + `script>
+                            <style>
+                                body { font-family: sans-serif; padding: 20px; }
+                                .report-container { max-width: 800px; margin: 0 auto; }
+                                .report-title { text-align: center; }
+                                .report-image { max-width: 200px; height: auto; display: block; margin: 20px auto; }
+                                .pdf-button {
+                                    padding: 10px 20px;
+                                    background-color: #007bff;
+                                    color: white;
+                                    border: none;
+                                    cursor: pointer;
+                                    margin-top: 20px;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="report-container" id="report-content">
+                                <h2 class="report-title">Relatório de ${morador.nomeCompleto}</h2>
+                                <img class="report-image" src="http://localhost:3001/uploads/${morador.imagen}" alt="Foto do Morador">
+                                <p><strong>CPF:</strong> ${morador.cpf}</p>
+                                <p><strong>RG:</strong> ${morador.rg}</p>
+                                <p><strong>Nome da Mãe:</strong> ${morador.nome_mae}</p>
+                                <p><strong>Vulgo:</strong> ${morador.vulgo}</p>
+                                <p><strong>Informação:</strong> ${morador.informacao}</p>
+                                <p><strong>Antecedentes:</strong> ${morador.antecedentes}</p>
+                                <p><strong>endereço:</strong> ${morador.endereco}</p>
+                                <p><strong>Beneficio:</strong> ${morador.bolsafamilia}</p>
+                                <p><strong>registro de entrada pop:</strong> ${morador.registropop}</p>
+                                <p><strong>registro entrada caps:</strong> ${morador.entradacaps}</p>
+                                <button class="pdf-button" onclick="gerarPdfDoRelatorio('${morador.cpf}')">Gerar PDF</button>
+                            </div>
+                            
+                            <script>
+                                function gerarPdfDoRelatorio(cpf) {
+                                    const element = document.getElementById('report-content');
+                                    html2pdf().from(element).save('relatorio-morador-'+ cpf +'.pdf');
+                                }
+                            </` + `script>
+                        </body>
+                        </html>
+                    `;
+                    reportWindow.document.write(reportHtml);
+                    reportWindow.document.close();
+
+                } else {
+                    reportWindow.document.write(`<p>Erro: ${data.message}</p>`);
+                    reportWindow.document.close();
+                }
+            } catch (error) {
+                reportWindow.document.write('<p>Erro ao carregar dados do morador.</p>');
+                reportWindow.document.close();
+                console.error('Erro ao carregar relatório:', error);
+            }
+        }
+    });
+</script>
+</body>
+</html>
