@@ -8,8 +8,13 @@ const path = require('path');
 const cors = require('cors');
 const jwt = require('jsonwebtoken'); // <--- IMPORTAÇÃO NECESSÁRIA PARA JWT
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 8000;
 
+
+
+app.listen(port, () => {
+  console.log(`Servidor rodando na porta ${port}`);
+});
 
 app.use(cors({
   origin: 'https://login-xi-smoky.vercel.app/' // Substitua pela sua URL Vercel
