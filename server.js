@@ -5,16 +5,13 @@ const cors = require('cors'); // Para permitir requisições de origens diferent
 require('dotenv').config(); // Carrega variáveis de ambiente do arquivo .env
 const multer = require('multer');
 const path = require('path');
-const cors = require('cors');
 const jwt = require('jsonwebtoken'); // <--- IMPORTAÇÃO NECESSÁRIA PARA JWT
 const app = express();
 const port = process.env.PORT || 8000;
 
 
 
-app.listen(port, () => {
-  console.log(`Servidor rodando na porta ${port}`);
-});
+
 
 app.use(cors({
   origin: 'https://login-xi-smoky.vercel.app/' // Substitua pela sua URL Vercel
@@ -438,8 +435,6 @@ app.get('/api/moradores/:id', authenticateToken, async (req, res) => {
 
 // Inicia o Servidor
 app.listen(port, () => {
-    console.log(`Servidor Node.js rodando em http://localhost:${port}`);
-    console.log(`Frontend acessível em http://localhost:${port}/`);
-    console.log(`Endpoint de cadastro (POST): http://localhost:${port}/api/moradores`);
-    console.log(`Endpoint de Login (POST): http://localhost:${port}/api/login`);
+     console.log(`Servidor Node.js rodando na porta ${port}`);
+    console.log(`API acessível em ${process.env.PUBLIC_URL}`);
 });
