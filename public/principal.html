@@ -1,143 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/stylespricinpal.css">
-    <title>Polícia Municipal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Policia Municipal</title>
 </head>
+
 <body>
-
-    <nav>    
-    <div class="cor-menu-top">
-    <h1>Bem-vindo à Polícia Municipal!</h1>
-    </div>
-
-    <div class="logo-menu">
-        <img src="assets/logo.jpeg" alt="">
-    </div>
-    <div>
-    <a href="index.html"><button>SAIR</button></a>
-</div>
-
- <div id="menu-man">
-        <ul class="menu">
-          <li><a href="#">HOME</a></li>
-
-</div>
- <div class="menu-man0">
-        <ul class="menu0">
-        </div>
-      <div class="m0">  
-  <li class="dropd">
-    <a class="dropbtn0">Cadastro</a>
-    <div class="dropdo-content0">
-      <a href="https://login-production-0c35.up.railway.app/api/cadUsuario.html">Cadastrar-Policia</a>
-      <a href="https://login-production-0c35.up.railway.app/api/cadMoradorRua.html">Morador-Rua</a>
-      
-    </div>
-    </div>
-   <button class="navbar__toggle" aria-label="Menu">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </button>
-  </ul>
-  </div>
-
-
-
-
- <div class="menu-man1">
-        <ul class="menu1">
-        </div>
-      <div class="m1">  
-  <li class="dropd">
-    <a class="dropbtn1">Grupamento</a>
-    <div class="dropdo-content1">
-      <a href="https://login-production-0c35.up.railway.app/api/mariaPenha.html">Maria da Penha</a>
-      <a href="https://login-production-0c35.up.railway.app/api/rope.html">Rope</a>
-      <a href="https://login-production-0c35.up.railway.app/api/gptram.html">Gpetran</a>
-      <a href="https://login-production-0c35.up.railway.app/api/gam.html">GAM</a>
-    </div>
-    </div>
-   <button class="navbar__toggle" aria-label="Menu">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </button>
-  </ul>
-  </div>
-
-  <div class="menu-man2">
-        <ul class="menu2">
-        </div>
-      <div class="m2">  
-  <li class="dropd">
-    <a class="dropbtn2">Escala</a>
-    <div class="dropdo-content2">
-      <a href="https://login-production-0c35.up.railway.app/api/cadUsuario.html">Normal</a>
-      <a href="https://login-production-0c35.up.railway.app/api/cadUsuario.html">Extra</a>
-      <a href="https://login-production-0c35.up.railway.app/api/cadUsuario.html">Banco</a>
-    </div>
-   <button class="navbar__toggle" aria-label="Menu">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </button>
-  </ul>
-  </div>
-
-    <div class="menu-man3">
-        <ul class="menu3">
-        </div>
-      <div class="m3">
-  <li class="dropd">
-    <a class="dropbtn3">Relatorio</a>
-    <div class="dropdo-content3">
-      <a href="https://login-production-0c35.up.railway.app/api/relatarioMrua.html">Morador de Rua</a>
-      <a href="https://login-production-0c35.up.railway.app/api/cadUsuario.html">Realatorio de Serviço</a>
-    </div>
-   <button class="navbar__toggle" aria-label="Menu">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </button>
-  </ul>
-  </div>
-    </nav>
-
+    <div class="estrelas"></div>
   
-      <div id="relatorio-ocorrencia">
-          <p>Aqui você pode clicar para 
-          Buscar Relatorio das <h4>Ocorrencia</h4></p>  
-            <label class="cadastra-p">Acessar</label>
-          <a href="https://login-production-0c35.up.railway.app/api/ocorrencia.html"><i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      
- 
+    <div class="formulario">
+      <img class="logo-pm" src="assets/logo-policia.jpeg" alt="Logo da Polícia Municipal">
+    <h1>Login Policia Municipal</h1>
     
+        <form id="loginForm">
+            <label class="label" for="nivel">Nivel de Acesso</label>
+            <select id="tipoAcesso" name="tipoAcesso" class="form-select-custom">    
+                <option value="Operacional" selected>Operacional</option>
+                <option value="Tatico">Tatico</option>
+                <option value="Estrategico">Estrategico</option>
+            </select>
+
+            <div class="input">
+                <input type="text" id="identificador" name="nomeGuerra" required>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            
+            <div class="div1user">
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="div2cadeado">
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            
+            <a href="redefinicao.html">Esqueceu sua senha? Clique aqui!</a>
+
+            <div id="bot-voltar">
+                <a href="cadUsuario.html" id="Cadastrar" class="cadastrar">Cadastre-se</a>
+            </div>
+            <button type="submit" id="entra" class="entrar">Entrar</button>
+            <img src="./assets/logo.jpeg" >
+            <img class="pre" src="assets/logo-prefeitura2.jpg" >
+        </form>
+    </div>
+           
+    <div id="message" class="message"></div>
+    <div id="loadingMessage" class="loading-message" style="display: none;">
+        Carregando... Por favor, aguarde.
+    </div>
     
-      <div id="cadastrar-agente">
-          <p>Aqui você pode clicar para 
-          <h4>Cadastrar Policial</h4></p>  
-          <label class="cadastra-p">Acessar</label>
-          <a href="https://login-production-0c35.up.railway.app/api/cadUsuario.html"><i class="fa-solid fa-arrow-right"></i></a>
-      </div>
+    <script>
+        // ✅ CORREÇÃO: URL base única
+        const BASE_URL = 'https://login-production-0c35.up.railway.app';
 
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.getElementById('loginForm');
+            
+            console.log('Login Form:', loginForm);
 
+            if (loginForm) {
+                loginForm.addEventListener('submit', async function(event) {
+                    event.preventDefault();
 
+                    const identificadorInput = document.getElementById('identificador');
+                    const senhaInput = document.getElementById('senha');
+                    const tipoAcessoSelect = document.getElementById('tipoAcesso');
+                    let messageDiv = document.getElementById('message');
+                    let loadingMessageDiv = document.getElementById('loadingMessage');
+
+                    const identificador = identificadorInput.value.trim();
+                    const senha = senhaInput.value.trim();
+                    const tipoAcesso = tipoAcessoSelect.value;
+                    
+                    loadingMessageDiv.style.display = 'block';
+
+                    try {
+                        // ✅ CORREÇÃO: URL corrigida
+                        const response = await fetch(`${BASE_URL}/api/login`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ username: identificador, password: senha, tipoAcesso: tipoAcesso }),
+                        });
+
+                        loadingMessageDiv.style.display = 'none';
+
+                        if (!response.ok) {
+                            const errorData = await response.json().catch(() => ({ message: 'Erro ao processar resposta do servidor.' }));
+                            throw new Error(errorData.message);
+                        }
+
+                        const result = await response.json();
+
+                        if (result.success) {
+                            localStorage.setItem('jwtToken', result.token);
+                            
+                            console.log('Token salvo com sucesso:', localStorage.getItem('jwtToken'));
+
+                            messageDiv.classList.add('success');
+                            messageDiv.textContent = result.message;
+                            messageDiv.style.display = 'block';
+
+                            await new Promise(resolve => setTimeout(resolve, 1000));
+                            
+                            window.location.href = 'https://login-xi-smoky.vercel.app/principal.html';
+                        } else {
+                            messageDiv.classList.add('error');
+                            messageDiv.textContent = result.message || 'Erro desconhecido no login.';
+                            messageDiv.style.display = 'block';
+                        }
+
+                    } catch (error) {
+                        loadingMessageDiv.style.display = 'none';
+                        messageDiv.classList.add('error');
+                        messageDiv.textContent = error.message || 'Erro ao conectar com o servidor. Verifique sua conexão.';
+                        messageDiv.style.display = 'block';
+                    }
+                });
+            } else {
+                console.error("Erro fatal: Formulário de login não encontrado.");
+            }
+        });
+    </script>
 </body>
-
-
-
-<script>//aqui ta trecho do codigo da tabela do menu//
-    document.querySelectorAll('.dropdown').forEach(item => {
-  item.addEventListener('click', event => {
-    const dropdownContent = item.querySelector('.dropdown-content');
-    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
-  });
-});
-</script>
 </html>
