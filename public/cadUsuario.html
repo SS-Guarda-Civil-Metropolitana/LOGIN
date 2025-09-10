@@ -47,7 +47,7 @@
             </div> 
             
             <button type="submit"  id="botao-cadastrar" >Cadastrar</button>
-            <a href="http://localhost:3001/principal.html"><button type="button" class="botao-voltar">Voltar Dashboard</button>
+            <a href="http://login-production-0c35.up.railway.app/api/principal.html"><button type="button" class="botao-voltar">Voltar Dashboard</button>
             <div class="link-registro">
               
                 
@@ -117,11 +117,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         /*console.log('3. Tentando enviar fetch para:', 'http://localhost:3001/cadastrar');*/
-        console.log('3. Tentando enviar fetch para:', 'https://login-production-0c35.up.railway.app/cadastrar');
+        console.log('3. Tentando enviar fetch para:', 'https://login-production-0c35.up.railway.app/api/adastrar');
 
         try {
            /* const response = await fetch('http://localhost:3001/cadastrar', {*/
-                  const response = await fetch('https://login-production-0c35.up.railway.app/cadastrar', {
+                  const response = await fetch('https://login-production-0c35.up.railway.app/pai/cadastrar', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Espera 1 segundo para garantir que o localStorage atualize
                     await new Promise(resolve => setTimeout(resolve, 1000));
                     
-                    window.location.href = 'http://localhost:3001/principal.html';
+                    window.location.href = 'https://login-production-0c35.up.railway.app/api/principal.html';
                 } else {
                     messageDiv.classList.add('error');
                     messageDiv.textContent = result.message || 'Erro desconhecido no login.';

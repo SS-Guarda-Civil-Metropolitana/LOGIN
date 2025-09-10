@@ -99,7 +99,7 @@
                     queryParams.append(dbColumn, searchTerm);
                     const queryString = queryParams.toString();
                     
-                    const response = await fetch(`http://login-production-0c35.up.railway.app/moradores/busca?${queryString}`, {
+                    const response = await fetch(`http://login-production-0c35.up.railway.app/api/moradores/busca?${queryString}`, {
                         method: 'GET',
                         headers: {
                             'Content-Type': 'application/json',
@@ -130,7 +130,7 @@
                                 cell.className = 'celula-dados';
                                 if (field === 'imagen' && user[field]) {
                                     const img = document.createElement('img');
-                                    img.src = `http://localhost:3001/uploads/${user[field]}`;
+                                    img.src = `https://login-production-0c35.up.railway.app/api/uploads/${user[field]}`;
                                     img.alt = 'Foto do morador';
                                     img.style.width = '50px';
                                     cell.appendChild(img);
@@ -173,7 +173,7 @@
             reportWindow.document.write('<p>Carregando relatório...</p>');
 
             try {
-                const response = await fetch(`http://login-production-0c35.up.railway.app/moradores/${userId}`, {
+                const response = await fetch(`http://login-production-0c35.up.railway.app/api/moradores/${userId}`, {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
                 const data = await response.json();
@@ -206,7 +206,7 @@
                         <body>
                             <div class="report-container" id="report-content">
                                 <h2 class="report-title">Relatório de ${morador.nomeCompleto}</h2>
-                                <img class="report-image" src="http://localhost:3001/uploads/${morador.imagen}" alt="Foto do Morador">
+                                <img class="report-image" src="https://login-production-0c35.up.railway.app/api/uploads/${morador.imagen}" alt="Foto do Morador">
                                 <p><strong>CPF:</strong> ${morador.cpf}</p>
                                 <p><strong>RG:</strong> ${morador.rg}</p>
                                 <p><strong>Nome da Mãe:</strong> ${morador.nome_mae}</p>
