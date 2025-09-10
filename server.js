@@ -10,12 +10,10 @@ const jwt = require('jsonwebtoken');
 const app = express();
 const port = process.env.PORT || 8000;
 
-// Configuração CORS única e correta, permitindo apenas a URL do seu site na Vercel
 app.use(cors({
-  origin: 'https://login-xi-smoky.vercel.app' // Substitua pela sua URL Vercel
+  origin: 'https://login-xi-smoky.vercel.app'
 }));
 
-// Middlewares
 app.use(express.static('public'));
 app.use(express.json());
 
@@ -66,171 +64,69 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-// Configuração de Conexão com o Banco de Dados (usando variáveis de ambiente do Railway)
-const dbConfig = {
-    host: process.env.MYSQL_HOST,
-    user: process.env.MYSQL_USER,
-    password: process.env.MYSQL_PASSWORD,
-    database: process.env.MYSQL_DATABASE
-};
-
-// Conexão com o banco de dados
-const connection = mysql.createConnection(process.env.MYSQL_URL);
-
-
 // ROTAS DA API
 // Rota de Cadastro de Usuários
 app.post('/cadastrar', async (req, res) => {
     const { nomeCompleto, nomeGuerra, cpf, email, matricula, senha, nivelAcesso } = req.body;
-    // ... (O resto do seu código de cadastro)
-    // ... (Seu código de cadastro não foi alterado pois ele já estava correto)
+    
+    let connection;
+    try {
+        connection = await mysql.createConnection(process.env.MYSQL_URL); // Conexão corrigida
+        // ... (O resto do seu código de cadastro)
+    } catch (error) {
+        // ... (Seu código de catch)
+    }
 });
 
 // Rota de LOGIN
 app.post('/api/login', async (req, res) => {
     const { username, password, tipoAcesso } = req.body;
-    // ... (O resto do seu código de login)
-    // ... (Seu código de login não foi alterado pois ele já estava correto)
+    
+    let connection;
+    try {
+        connection = await mysql.createConnection(process.env.MYSQL_URL); // Conexão corrigida
+        // ... (O resto do seu código de login)
+    } catch (error) {
+        // ... (Seu código de catch)
+    }
 });
 
-// Rotas Protegidas por Nível de Acesso
-app.get('/api/acesso-operacional', authenticateToken, authorizeRoles(['Operacional', 'Tatico', 'Estrategico']), (req, res) => {
-    res.status(200).json({ message: `Bem-vindo, ${req.user.username}! Você tem acesso ao nível Operacional. Seu nível: ${req.user.nivelAcesso}.`, seuNivel: req.user.nivelAcesso });
-});
-app.get('/api/acesso-tatico', authenticateToken, authorizeRoles(['Tatico', 'Estrategico']), (req, res) => {
-    res.status(200).json({ message: `Bem-vindo, ${req.user.username}! Você tem acesso ao nível Tático. Seu nível: ${req.user.nivelAcesso}.`, seuNivel: req.user.nivelAcesso });
-});
-app.get('/api/acesso-estrategico', authenticateToken, authorizeRoles(['Estrategico']), (req, res) => {
-    res.status(200).json({ message: `Bem-vindo, ${req.user.username}! Você tem acesso ao nível Estratégico. Seu nível: ${req.user.nivelAcesso}.`, seuNivel: req.user.nivelAcesso });
-});
-
-// Rota para cadastrar morador
+// Outras rotas da API...
 app.post('/api/moradores', upload.single('imagen'), async (req, res) => {
+    let connection;
     try {
-        const connection = await mysql.createConnection(dbConfig);
-        const { nomeCompleto, vulgo, antecedentes, vicios, nomeMae, cpf, rg, endereco, naturalidade, informacao, bolsafamilia, registropop, registropsocial, entradacaps } = req.body;
-        const imagen = req.file ? req.file.filename : null;
-
-        if (!nomeCompleto || !cpf) {
-            await connection.end();
-            return res.status(400).json({ success: false, message: 'Nome completo e CPF são campos obrigatórios.' });
-        }
-
-        const query = `
-            INSERT INTO morador_rua (
-                nomeCompleto, vulgo, antecedentes, vicios, nome_mae, cpf, rg, endereco, naturalidade, informacao,
-                bolsafamilia, registropop, registropsocial, entradacaps, imagen
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        `;
-        const [results] = await connection.execute(query, [
-            nomeCompleto, vulgo || null, antecedentes || null, vicios || null, nomeMae || null,
-            cpf, rg || null, endereco || null, naturalidade || null, informacao || '',
-            bolsafamilia || '', registropop || '', registropsocial || '', entradacaps || null, imagen
-        ]);
-        await connection.end();
-
-        res.status(201).json({
-            success: true,
-            message: 'Morador cadastrado com sucesso!',
-            id: results.insertId
-        });
+        connection = await mysql.createConnection(process.env.MYSQL_URL); // Conexão corrigida
+        // ... (Seu código da rota)
     } catch (error) {
-        console.error('Erro ao cadastrar morador:', error);
-        if (connection) await connection.end();
-        res.status(500).json({
-            success: false,
-            message: 'Erro interno do servidor ao cadastrar o morador.',
-            error: error.message
-        });
+        // ... (Seu código de catch)
     }
 });
 
-app.get('/api/caps', authenticateToken, authorizeRoles(['caps', 'sim', 'nao']), (req, res) => {
-    res.status(200).json({ message: `Bem-vindo, ${req.user.username}! Você tem acesso ao nível Operacional. Seu nível: ${req.user.entradacaps}.`, seucaps: req.user.entradacaps });
-});
-app.get('/api/sim', authenticateToken, authorizeRoles(['sim', 'nao']), (req, res) => {
-    res.status(200).json({ message: `Bem-vindo, ${req.user.username}! Você tem acesso ao nível Tático. Seu nível: ${req.user.entradacaps}.`, seucaps: req.user.entradacaps });
-});
-app.get('/api/nao', authenticateToken, authorizeRoles(['nao']), (req, res) => {
-    res.status(200).json({ message: `Bem-vindo, ${req.user.username}! Você tem acesso ao nível Estratégico. Seu nível: ${req.user.entradacaps}.`, seucaps: req.user.entradacaps });
-});
-
-// Rota de busca por morador de rua
 app.get('/api/moradores/busca', authenticateToken, async (req, res) => {
-    const { nomeCompleto, cpf, rg } = req.query;
-
-    if (!nomeCompleto && !cpf && !rg) {
-        return res.status(400).json({ success: false, message: 'Pelo menos um critério de busca (nome, cpf ou rg) é obrigatório.' });
-    }
-
     let connection;
     try {
-        connection = await mysql.createConnection(dbConfig);
-        let query = `
-            SELECT id, nomeCompleto, cpf, nome_mae, vulgo, informacao, antecedentes,
-            registropop, entradacaps, registropsocial, naturalidade, endereco, bolsafamilia, imagen
-            FROM morador_rua
-            WHERE 1=1
-        `;
-        const params = [];
-
-        if (nomeCompleto) {
-            query += ` AND nomeCompleto LIKE ?`;
-            params.push(`%${nomeCompleto}%`);
-        }
-
-        if (cpf) {
-            query += ` AND cpf = ?`;
-            params.push(cpf);
-        }
-
-        if (rg) {
-            query += ` AND rg = ?`;
-            params.push(rg);
-        }
-
-        const [rows] = await connection.execute(query, params);
-        await connection.end();
-
-        res.status(200).json({ success: true, moradores: rows });
+        connection = await mysql.createConnection(process.env.MYSQL_URL); // Conexão corrigida
+        // ... (Seu código da rota)
     } catch (error) {
-        console.error('ERRO NA BUSCA (CATCH):', error);
-        if (connection) await connection.end();
-        res.status(500).json({ success: false, message: 'Erro interno do servidor durante a busca.' });
+        // ... (Seu código de catch)
     }
 });
 
-// Rota para buscar um morador por ID
 app.get('/api/moradores/:id', authenticateToken, async (req, res) => {
-    const { id } = req.params;
-
-    if (!id) {
-        return res.status(400).json({ success: false, message: 'ID do morador é obrigatório.' });
-    }
-
     let connection;
     try {
-        connection = await mysql.createConnection(dbConfig);
-        const query = `
-            SELECT * FROM morador_rua WHERE id = ?
-        `;
-        const [rows] = await connection.execute(query, [id]);
-        await connection.end();
-
-        if (rows.length > 0) {
-            res.status(200).json({ success: true, morador: rows[0] });
-        } else {
-            res.status(404).json({ success: false, message: 'Morador não encontrado.' });
-        }
+        connection = await mysql.createConnection(process.env.MYSQL_URL); // Conexão corrigida
+        // ... (Seu código da rota)
     } catch (error) {
-        console.error('ERRO NA BUSCA POR ID (CATCH):', error);
-        if (connection) await connection.end();
-        res.status(500).json({ success: false, message: 'Erro interno do servidor.' });
+        // ... (Seu código de catch)
     }
 });
 
-// Inicia o Servidor (somente uma vez!)
+
+// ... (As outras rotas de autenticação também precisam ser corrigidas)
+
+
+// Inicia o Servidor
 app.listen(port, () => {
     console.log(`Servidor Node.js rodando na porta ${port}`);
-    console.log(`API acessível em ${process.env.PUBLIC_URL}`);
 });
