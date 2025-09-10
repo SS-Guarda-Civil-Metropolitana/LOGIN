@@ -75,7 +75,7 @@ const dbConfig = {
 };
 
 // Conexão com o banco de dados
-const connection = mysql.createConnection(dbConfig);
+const connection = mysql.createConnection(process.env.MYSQL_URL);
 
 
 // ROTAS DA API
